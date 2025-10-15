@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Caption Generator - Create Engaging Social Media Captions | ToolLab</title>
+  <meta name="description" content="Free AI-powered caption generator for Instagram, Facebook, Twitter, and more. Create viral captions, hashtags, and content ideas instantly.">
+  <meta name="keywords" content="caption generator, social media captions, Instagram captions, Facebook posts, Twitter captions, AI caption writer, viral captions, hashtag generator">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ToolLab">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="AI Caption Generator - Create Engaging Social Media Captions | ToolLab">
+  <meta property="og:description" content="Free AI-powered caption generator for Instagram, Facebook, Twitter, and more. Create viral captions, hashtags, and content ideas instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetoollab.netlify.app/tools/CaptionCreator.html">
+  <meta property="og:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta property="og:site_name" content="ToolLab">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Caption Generator - Create Engaging Social Media Captions | ToolLab">
+  <meta name="twitter:description" content="Free AI-powered caption generator for Instagram, Facebook, Twitter, and more. Create viral captions, hashtags, and content ideas instantly.">
+  <meta name="twitter:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta name="google-adsense-account" content="ca-pub-1579994484328521">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../Photos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../Photos/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Photos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Photos/favicon-16x16.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thetoollab.netlify.app/tools/CaptionCreator.html">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Caption Generator",
+    "description": "Free AI-powered tool to generate engaging social media captions and hashtags",
+    "url": "https://thetoollab.netlify.app/tools/CaptionCreator.html",
+    "applicationCategory": "SocialNetworkingApplication",
+    "operatingSystem": "Any",
+    "permissions": "none",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "url": "https://thetoollab.netlify.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoollab.netlify.app/Photos/Logo.png"
+      }
+    }
+  }
+  </script>
+   <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1579994484328521"
+     crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --primary-color: #7F00FF;
+      --secondary-color: #E100FF;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #7F00FF, #E100FF);
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+      --footer-bg: #111;
+      --success-color: #10B981;
+      --warning-color: #F59E0B;
+      --danger-color: #EF4444;
+    }
+
+    .dark-mode {
+      --primary-color: #9d4edd;
+      --secondary-color: #c77dff;
+      --background-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(90deg, #5a189a, #7b2cbf);
+      --shadow: 0 4px 10px rgba(0,0,0,0.2);
+      --footer-bg: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: var(--header-bg);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 35px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* All Tools Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--card-bg);
+      min-width: 300px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      z-index: 1001;
+      padding: 15px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content h4 {
+      color: var(--primary-color);
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dropdown-tool {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .dropdown-tool:hover {
+      background: rgba(127, 0, 255, 0.1);
+    }
+
+    .dropdown-tool i {
+      color: var(--primary-color);
+      width: 20px;
+      text-align: center;
+    }
+
+    .dropdown-tool span {
+      font-size: 0.9rem;
+    }
+
+    .hot-tool {
+      background: rgba(255, 107, 107, 0.1);
+      border-left: 3px solid #FF6B6B;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 80px 5% 60px;
+      background: var(--header-bg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin: 0 auto 20px;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .badge i {
+      color: var(--primary-color);
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- CAPTION GENERATOR STYLES ---------- */
+    .generator-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 5%;
+    }
+
+    .generator-card {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+
+    .input-section {
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: var(--card-bg);
+      color: var(--text-color);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .platform-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .platform-option {
+      background: var(--background-color);
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .platform-option:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .platform-option.active {
+      border-color: var(--primary-color);
+      background: rgba(127, 0, 255, 0.05);
+    }
+
+    .platform-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+
+    .tone-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .tone-option {
+      background: var(--background-color);
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .tone-option:hover {
+      border-color: var(--primary-color);
+    }
+
+    .tone-option.active {
+      border-color: var(--primary-color);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .generate-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .generate-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .generate-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .results-section {
+      background: var(--background-color);
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 30px;
+      display: none;
+    }
+
+    .results-section.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .caption-result {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .caption-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      white-space: pre-line;
+    }
+
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .hashtag {
+      background: rgba(127, 0, 255, 0.1);
+      color: var(--primary-color);
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .copy-btn, .regenerate-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .copy-btn {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .copy-btn:hover {
+      background: var(--secondary-color);
+    }
+
+    .regenerate-btn {
+      background: var(--background-color);
+      color: var(--text-color);
+      border: 1px solid #e2e8f0;
+    }
+
+    .regenerate-btn:hover {
+      background: #e2e8f0;
+    }
+
+    /* ---------- FEATURES GRID ---------- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    /* ---------- PLATFORM EXAMPLES ---------- */
+    .examples-section {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      margin-top: 60px;
+    }
+
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .example-card {
+      background: var(--background-color);
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .example-platform {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .example-caption {
+      font-style: italic;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .example-hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    /* ---------- FAQ SECTION ---------- */
+    .faq-section {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      margin-top: 60px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 20px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .faq-answer {
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* ---------- ENHANCED FOOTER ---------- */
+    .footer-main {
+      background-color: var(--footer-bg);
+      color: #ccc;
+      padding: 60px 5% 30px;
+      transition: background-color 0.5s ease;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .footer-column p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-links i {
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-newsletter {
+      margin-top: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .newsletter-input::placeholder {
+      color: #aaa;
+    }
+
+    .newsletter-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #ccc;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    /* Tablets */
+    @media (max-width: 768px) {
+      .nav-links a span {
+        display: none;
+      }
+      
+      .nav-links a i {
+        font-size: 1.2rem;
+      }
+      
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-legal {
+        justify-content: center;
+      }
+      
+      .hero {
+        padding: 60px 5% 40px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .generator-card {
+        padding: 25px;
+      }
+      
+      .platform-options {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .dropdown-content {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 70vh;
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 576px) {
+      nav {
+        padding: 12px 5%;
+      }
+      
+      .logo-img {
+        height: 30px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+      
+      .nav-links a span {
+        display: inline;
+      }
+      
+      /* Mobile dropdown styles */
+      .dropdown-content {
+        position: static;
+        max-height: 50vh;
+        overflow-y: auto;
+        margin-top: 10px;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        width: 100%;
+      }
+      
+      .dropdown-content h4 {
+        color: white;
+      }
+      
+      .dropdown-tool {
+        color: white;
+      }
+      
+      .dropdown-tool i {
+        color: white;
+      }
+      
+      .hero {
+        padding: 50px 5% 30px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .trust-badges {
+        gap: 15px;
+      }
+      
+      .badge {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .platform-options {
+        grid-template-columns: 1fr;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <div class="logo-img" style="color: white; font-size: 1.5rem; font-weight: 700;">ToolLab</div>
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a>
+      
+      <!-- All Tools Dropdown -->
+      <div class="dropdown" id="toolsDropdown">
+        <a href="#" class="dropdown-toggle"><i class="fas fa-tools"></i> <span>All Tools</span> <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+        <div class="dropdown-content">
+          <h4>Most Popular Tools</h4>
+          <div class="dropdown-tool hot-tool" onclick="window.location.href='../Tools/password-generator.html'">
+            <i class="fas fa-key"></i>
+            <span>Password Generator</span>
+          </div>
+          <div class="dropdown-tool hot-tool" onclick="window.location.href='../Tools/QRcodegenerator.html'">
+            <i class="fas fa-qrcode"></i>
+            <span>QR Code Generator</span>
+          </div>
+          <div class="dropdown-tool hot-tool" onclick="window.location.href='../Tools/ImageCompressor.html'">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <span>Image Compressor</span>
+          </div>
+          <div class="dropdown-tool hot-tool" onclick="window.location.href='../Tools/pdfMerger.html'">
+            <i class="fas fa-object-group"></i>
+            <span>PDF Merger</span>
+          </div>
+          
+          <h4>Text Tools</h4>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/TextCaseConvertor.html'">
+            <i class="fas fa-text-height"></i>
+            <span>Case Converter</span>
+          </div>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/word-counter.html'">
+            <i class="fas fa-calculator"></i>
+            <span>Word Counter</span>
+          </div>
+
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/AgeCalculator.html'">
+            <i class="fas fa-comment-dots"></i>
+            <span>Age Calculator</span>    
+          </div>
+          
+          
+          <h4>Image Tools</h4>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/ImageCompressor.html'">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <span>Image Compressor</span>
+          </div>
+          
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/image-converter.html'">
+            <i class="fas fa-sync"></i>
+            <span>Image Converter</span>
+          </div>
+         
+          <h4>Code Tools</h4>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/json-formatter.html'">
+            <i class="fas fa-code"></i>
+            <span>JSON Formatter</span>
+          </div>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/NumberBaseConvertor.html'">
+            <i class="fas fa-code"></i>
+            <span>Number base Convertor</span>
+          </div>
+          
+          
+          <h4>PDF Tools</h4>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/pdfMerger.html'">
+            <i class="fas fa-object-group"></i>
+            <span>PDF Merger</span>
+          </div>
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/pdf-splitter.html'">
+            <i class="fas fa-cut"></i>
+            <span>PDF Splitter</span>
+          </div>
+         
+          <div class="dropdown-tool" onclick="window.location.href='../Tools/pdf-to-image.html'">
+            <i class="fas fa-file-image"></i>
+            <span>PDF to Image</span>
+          </div>
+        </div>
+      </div>
+      
+      <a href="../about.html"><i class="fas fa-info-circle"></i> <span>About</span></a>
+      <a href="../Contactus.html"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+      <a href="../homepage.html" style="color: gold;"><i class="fas fa-star"></i> <span>Features</span></a>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">AI Caption Generator</h1>
+      <div class="hero-subtitle fade-in">Create Viral Social Media Captions Instantly</div>
+      <p class="fade-in">Generate engaging captions, hashtags, and content ideas for Instagram, Facebook, Twitter, and more with AI power.</p>
+      
+      <div class="trust-badges fade-in">
+        <div class="badge">
+          <i class="fas fa-lock"></i>
+          <span style="color:#7F00FF;">Privacy First</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-bolt"></i>
+          <span style="color:#7F00FF;">AI Powered</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-user-shield"></i>
+          <span style="color:#7F00FF;">No Signup Required</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="generator-container">
+    <div class="generator-card fade-in">
+      <h2 style="color: var(--primary-color); margin-bottom: 30px; text-align: center;">
+        <i class="fas fa-magic"></i> Generate Your Caption
+      </h2>
+      
+      <div class="input-section">
+        <div class="form-group">
+          <label for="postDescription"><i class="fas fa-edit"></i> Describe Your Post</label>
+          <textarea 
+            id="postDescription" 
+            class="form-control" 
+            placeholder="Describe what your post is about, what image/video you're sharing, or what message you want to convey..."
+          ></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label><i class="fas fa-share-alt"></i> Select Platform</label>
+          <div class="platform-options">
+            <div class="platform-option active" data-platform="instagram">
+              <i class="fab fa-instagram platform-icon"></i>
+              <div>Instagram</div>
+            </div>
+            <div class="platform-option" data-platform="facebook">
+              <i class="fab fa-facebook platform-icon"></i>
+              <div>Facebook</div>
+            </div>
+            <div class="platform-option" data-platform="twitter">
+              <i class="fab fa-twitter platform-icon"></i>
+              <div>Twitter</div>
+            </div>
+            <div class="platform-option" data-platform="linkedin">
+              <i class="fab fa-linkedin platform-icon"></i>
+              <div>LinkedIn</div>
+            </div>
+            <div class="platform-option" data-platform="tiktok">
+              <i class="fab fa-tiktok platform-icon"></i>
+              <div>TikTok</div>
+            </div>
+            <div class="platform-option" data-platform="general">
+              <i class="fas fa-globe platform-icon"></i>
+              <div>General</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label><i class="fas fa-palette"></i> Select Tone</label>
+          <div class="tone-options">
+            <div class="tone-option active" data-tone="funny">Funny</div>
+            <div class="tone-option" data-tone="professional">Professional</div>
+            <div class="tone-option" data-tone="inspirational">Inspirational</div>
+            <div class="tone-option" data-tone="casual">Casual</div>
+            <div class="tone-option" data-tone="emotional">Emotional</div>
+            <div class="tone-option" data-tone="educational">Educational</div>
+            <div class="tone-option" data-tone="promotional">Promotional</div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="hashtagCount"><i class="fas fa-hashtag"></i> Number of Hashtags</label>
+          <input type="range" id="hashtagCount" class="form-control" min="0" max="15" value="5">
+          <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+            <span>0</span>
+            <span id="hashtagValue">5 hashtags</span>
+            <span>15</span>
+          </div>
+        </div>
+      </div>
+      
+      <button class="generate-btn" id="generateBtn">
+        <i class="fas fa-wand-magic-sparkles"></i> Generate Caption
+      </button>
+      
+      <div class="results-section" id="resultsSection">
+        <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;">
+          <i class="fas fa-sparkles"></i> Your Generated Caption
+        </h3>
+        
+        <div class="caption-result">
+          <div class="caption-text" id="captionText">
+            Your AI-generated caption will appear here...
+          </div>
+          <div class="hashtags" id="hashtagsContainer">
+            <!-- Hashtags will be generated here -->
+          </div>
+          <div class="action-buttons">
+            <button class="copy-btn" id="copyCaptionBtn">
+              <i class="fas fa-copy"></i> Copy Caption
+            </button>
+            <button class="regenerate-btn" id="regenerateBtn">
+              <i class="fas fa-sync-alt"></i> Regenerate
+            </button>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px; color: #64748b; font-size: 0.9rem;">
+          <i class="fas fa-lightbulb"></i> Tip: You can edit the caption above before copying it
+        </div>
+      </div>
+    </div>
+
+    <div class="features-grid fade-in">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>AI Powered</h3>
+        <p>Advanced AI technology generates creative and engaging captions tailored to your content.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Instant Results</h3>
+        <p>Get multiple caption options and hashtag suggestions in seconds, not hours.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-sliders-h"></i>
+        </div>
+        <h3>Customizable</h3>
+        <p>Choose platform, tone, and hashtag count to match your brand voice perfectly.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Privacy Focused</h3>
+        <p>Your content never gets stored. All processing happens securely in real-time.</p>
+      </div>
+    </div>
+
+    <div class="examples-section fade-in">
+      <h2 style="color: var(--primary-color); margin-bottom: 30px; text-align: center;">
+        <i class="fas fa-lightbulb"></i> Caption Examples
+      </h2>
+      
+      <div class="examples-grid">
+        <div class="example-card">
+          <div class="example-platform">
+            <i class="fab fa-instagram"></i> Instagram
+          </div>
+          <div class="example-caption">
+            "Golden hour magic ✨ There's something about sunset light that makes everything feel possible. What's your favorite time of day?"
+          </div>
+          <div class="example-hashtags">
+            <span class="hashtag">#sunset</span>
+            <span class="hashtag">#goldenhour</span>
+            <span class="hashtag">#inspiration</span>
+          </div>
+        </div>
+        
+        <div class="example-card">
+          <div class="example-platform">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </div>
+          <div class="example-caption">
+            "Just wrapped up an incredible project with an amazing team! Grateful for the collaboration and proud of what we've accomplished together. #Teamwork"
+          </div>
+          <div class="example-hashtags">
+            <span class="hashtag">#career</span>
+            <span class="hashtag">#professional</span>
+            <span class="hashtag">#success</span>
+          </div>
+        </div>
+        
+        <div class="example-card">
+          <div class="example-platform">
+            <i class="fab fa-tiktok"></i> TikTok
+          </div>
+          <div class="example-caption">
+            "When you finally nail that dance move after 50 tries 😂 Who else feels this struggle? #DanceChallenge #Progress"
+          </div>
+          <div class="example-hashtags">
+            <span class="hashtag">#funny</span>
+            <span class="hashtag">#dance</span>
+            <span class="hashtag">#relatable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section fade-in">
+      <h2 style="color: var(--primary-color); margin-bottom: 30px; text-align: center;">
+        <i class="fas fa-question-circle"></i> Frequently Asked Questions
+      </h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">How does the AI caption generator work?</div>
+        <div class="faq-answer">Our AI analyzes your post description and generates creative, engaging captions tailored to your chosen platform and tone. It considers current trends and best practices for each social media platform.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I customize the generated captions?</div>
+        <div class="faq-answer">Yes! You can edit the generated captions directly before copying them. You can also regenerate new options if you're not satisfied with the results.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Are the hashtags relevant to my content?</div>
+        <div class="faq-answer">Absolutely! The AI generates hashtags based on your post description and chosen platform, ensuring they're relevant and trending for maximum reach.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is my content stored or used for training?</div>
+        <div class="faq-answer">No, we value your privacy. Your post descriptions and generated captions are never stored on our servers or used to train AI models.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I use this for business accounts?</div>
+        <div class="faq-answer">Yes! Our caption generator works perfectly for both personal and business accounts across all social media platforms.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About ToolLab</h3>
+        <p>ToolLab provides free, powerful AI tools to help creators, marketers, and businesses enhance their digital presence.</p>
+        <div class="social-icons">
+         <a href="https://www.linkedin.com/in/joglekarvijay03/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/bramha_intelligence?utm_source=ig_web_button_share_sheet&igsh=MWl3aXo2MTMxMjJhZQ=="><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joglekarvijay03/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/index.html"><i class="fas fa-chevron-right"></i> All Tools</a></li>
+          <li><a href="/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="/Contactus.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="/privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="/privacy-policy.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Our Tools</h3>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Caption Generator</a></li>
+          <li><a href="CaptionCreator.html"><i class="fas fa-chevron-right"></i> Hashtag Generator</a></li>
+          <li><a href="pdf-compressor.html"><i class="fas fa-chevron-right"></i> PDF Compressor</a></li>
+          <li><a href="QRcodegenerator.html"><i class="fas fa-chevron-right"></i> QR code Generator</a></li>
+          <li><a href="pdfspitter.html"><i class="fas fa-chevron-right"></i> PDF Splitter</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+  <h3>Newsletter</h3>
+  <p>Subscribe to our newsletter to receive updates on new tools and features.</p>
+  <div class="footer-newsletter">
+    <form action="https://formspree.io/f/xkgqqbzk" method="POST" class="newsletter-form">
+      <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required>
+      <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+    <div id="newsletter-message" style="display: none; margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+  </div>
+</div>
+  </footer>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <div class="footer-copyright">
+        &copy; 2023 ToolLab. All rights reserved.
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Hugging Face API Configuration
+    const HF_API_TOKEN = 'your_hugging_face_token_here';
+    const HF_API_URL = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium';
+    
+    // DOM Elements
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const themeToggle = document.getElementById('themeToggle');
+    const generateBtn = document.getElementById('generateBtn');
+    const resultsSection = document.getElementById('resultsSection');
+    const captionText = document.getElementById('captionText');
+    const hashtagsContainer = document.getElementById('hashtagsContainer');
+    const copyCaptionBtn = document.getElementById('copyCaptionBtn');
+    const regenerateBtn = document.getElementById('regenerateBtn');
+    const hashtagCount = document.getElementById('hashtagCount');
+    const hashtagValue = document.getElementById('hashtagValue');
+    
+    // Platform and Tone Selection
+    const platformOptions = document.querySelectorAll('.platform-option');
+    const toneOptions = document.querySelectorAll('.tone-option');
+    
+    let selectedPlatform = 'instagram';
+    let selectedTone = 'funny';
+    
+    // Mobile Menu Toggle
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Dark Mode Toggle
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const icon = themeToggle.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+    
+    // Platform Selection
+    platformOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        platformOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+        selectedPlatform = option.getAttribute('data-platform');
+      });
+    });
+    
+    // Tone Selection
+    toneOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        toneOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+        selectedTone = option.getAttribute('data-tone');
+      });
+    });
+    
+    // Hashtag Count Update
+    hashtagCount.addEventListener('input', () => {
+      const count = hashtagCount.value;
+      hashtagValue.textContent = `${count} hashtag${count == 1 ? '' : 's'}`;
+    });
+    
+    // Tools dropdown functionality
+    const toolsDropdown = document.getElementById('toolsDropdown');
+    const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation(); // Prevent event from bubbling up
+      toolsDropdown.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!toolsDropdown.contains(e.target)) {
+        toolsDropdown.classList.remove('active');
+      }
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Don't close if clicking on dropdown toggle
+        if (!e.target.closest('.dropdown-toggle')) {
+          navLinks.classList.remove('active');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Generate Caption with Hugging Face API
+    generateBtn.addEventListener('click', async () => {
+        const postDescription = document.getElementById('postDescription').value.trim();
+        
+        if (!postDescription) {
+            alert('Please describe your post to generate a caption.');
+            return;
+        }
+        
+        // Show loading state
+        generateBtn.disabled = true;
+        generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+        
+        try {
+            // Generate AI-powered caption
+            const aiCaption = await generateAICaption(postDescription);
+            const smartHashtags = generateSmartHashtags(postDescription);
+            
+            // Display results
+            captionText.textContent = aiCaption;
+            
+            // Clear and add hashtags
+            hashtagsContainer.innerHTML = '';
+            smartHashtags.forEach(tag => {
+                const hashtagElement = document.createElement('span');
+                hashtagElement.className = 'hashtag';
+                hashtagElement.textContent = tag;
+                hashtagsContainer.appendChild(hashtagElement);
+            });
+            
+            // Show results section
+            resultsSection.classList.add('show');
+            
+        } catch (error) {
+            console.error('Error generating caption:', error);
+            // Fallback to offline generation if API fails
+            const offlineCaption = generateSmartCaption(postDescription);
+            const offlineHashtags = generateSmartHashtags(postDescription);
+            
+            captionText.textContent = offlineCaption;
+            hashtagsContainer.innerHTML = '';
+            offlineHashtags.forEach(tag => {
+                const hashtagElement = document.createElement('span');
+                hashtagElement.className = 'hashtag';
+                hashtagElement.textContent = tag;
+                hashtagsContainer.appendChild(hashtagElement);
+            });
+            resultsSection.classList.add('show');
+            
+            // Show user-friendly error message
+            showNotification('AI service temporarily unavailable. Using offline generation.', 'warning');
+        } finally {
+            // Reset button state
+            generateBtn.disabled = false;
+            generateBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i> Generate Caption';
+        }
+    });
+
+    // AI CAPTION GENERATOR USING HUGGING FACE API
+    async function generateAICaption(description) {
+        // Platform and tone context for the AI
+        const platformContext = {
+            instagram: "Create an engaging Instagram caption that's visual and emotional",
+            facebook: "Write a friendly Facebook post for sharing with friends and family",
+            twitter: "Create a concise Twitter post within character limits",
+            linkedin: "Write a professional LinkedIn post about career or business",
+            tiktok: "Create a fun, engaging TikTok caption that's trendy and viral",
+            general: "Write a great social media caption"
+        };
+
+        const toneContext = {
+            funny: "in a humorous and funny tone",
+            professional: "in a professional and business-appropriate tone", 
+            inspirational: "in an inspirational and motivational tone",
+            casual: "in a casual and friendly tone",
+            emotional: "in an emotional and heartfelt tone",
+            educational: "in an educational and informative tone",
+            promotional: "in an exciting promotional tone"
+        };
+
+        const prompt = `${platformContext[selectedPlatform]}. ${toneContext[selectedTone]}. Based on this: "${description}". Create a compelling social media caption:`;
+
+        try {
+            const response = await fetch(HF_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${HF_API_TOKEN}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    inputs: prompt,
+                    parameters: {
+                        max_length: 100,
+                        temperature: 0.9,
+                        do_sample: true,
+                        return_full_text: false
+                    }
+                })
+            });
+
+            if (!response.ok) {
+                // Check if it's a permission error
+                if (response.status === 403) {
+                    throw new Error('API token does not have inference permissions. Please check your Hugging Face token settings.');
+                }
+                throw new Error(`API request failed with status ${response.status}`);
+            }
+
+            const data = await response.json();
+            
+            if (data && data[0] && data[0].generated_text) {
+                // Clean up the response and add platform-appropriate emojis
+                let caption = data[0].generated_text.trim();
+                
+                // Remove any repeated prompts or unwanted text
+                caption = caption.replace(prompt, '').trim();
+                caption = caption.split('\n')[0]; // Take only the first line
+                
+                // Add relevant emojis based on platform and tone
+                const emojis = getRelevantEmojis();
+                return `${caption} ${emojis}`;
+            } else {
+                throw new Error('Invalid response format from AI service');
+            }
+            
+        } catch (error) {
+            console.error('Hugging Face API error:', error);
+            throw error; // Re-throw to handle in the main function
+        }
+    }
+
+    // Helper function to get relevant emojis
+    function getRelevantEmojis() {
+        const platformEmojis = {
+            instagram: ["✨", "🌟", "📸", "🔥", "❤️"],
+            facebook: ["👥", "🌍", "👍", "😊"],
+            twitter: ["💭", "👆", "🔁", "💫"],
+            linkedin: ["💼", "🚀", "📈", "💡"],
+            tiktok: ["🎵", "👀", "💃", "🔥"],
+            general: ["👍", "🎉", "💪", "🌟"]
+        };
+
+        const toneEmojis = {
+            funny: ["😂", "🤣", "😆"],
+            professional: ["💼", "🎯", "⭐"],
+            inspirational: ["✨", "🌟", "💫"],
+            casual: ["😊", "👍", "👋"],
+            emotional: ["💖", "😊", "🥹"],
+            educational: ["🧠", "💡", "📚"],
+            promotional: ["🎉", "🔥", "🎁"]
+        };
+
+        const platformEmoji = platformEmojis[selectedPlatform]?.[Math.floor(Math.random() * platformEmojis[selectedPlatform].length)] || "✨";
+        const toneEmoji = toneEmojis[selectedTone]?.[Math.floor(Math.random() * toneEmojis[selectedTone].length)] || "🌟";
+        
+        return `${platformEmoji}${toneEmoji}`;
+    }
+
+    // SMART HASHTAG GENERATOR
+    function generateSmartHashtags(description) {
+        // Extract keywords from description
+        const words = description.toLowerCase().split(/\s+/);
+        const keywords = words.filter(word => word.length > 3).slice(0, 5);
+        
+        // Platform-specific hashtags
+        const platformTags = {
+            instagram: ['instagram', 'instagood', 'photooftheday', 'picoftheday', 'trending', 'viral', 'igers', 'instadaily'],
+            facebook: ['facebook', 'fb', 'share', 'community', 'friends', 'update', 'life', 'moments'],
+            twitter: ['twitter', 'tweet', 'thread', 'viral', 'trending', 'follow', 'retweet', 'social'],
+            linkedin: ['linkedin', 'career', 'professional', 'business', 'networking', 'success', 'growth', 'achievement'],
+            tiktok: ['tiktok', 'viral', 'fyp', 'foryou', 'trending', 'video', 'content', 'creator'],
+            general: ['socialmedia', 'content', 'post', 'digital', 'online', 'share', 'moment']
+        };
+
+        // Tone-specific hashtags
+        const toneTags = {
+            funny: ['funny', 'humor', 'comedy', 'laugh', 'joke', 'lol', 'humorous'],
+            professional: ['professional', 'business', 'career', 'success', 'growth', 'achievement', 'milestone'],
+            inspirational: ['inspiration', 'motivation', 'positive', 'mindset', 'goals', 'dreams', 'aspire'],
+            casual: ['casual', 'life', 'daily', 'simple', 'easy', 'chill', 'relaxed'],
+            emotional: ['emotional', 'feelings', 'heart', 'love', 'grateful', 'blessed', 'thankful'],
+            educational: ['education', 'learn', 'knowledge', 'tips', 'facts', 'wisdom', 'insight'],
+            promotional: ['promo', 'offer', 'deal', 'special', 'limited', 'opportunity', 'announcement']
+        };
+
+        // Popular general hashtags
+        const popularTags = ['love', 'like', 'follow', 'share', 'comment', 'awesome', 'amazing', 'great', 'good', 'nice'];
+
+        // Combine all hashtags
+        let allHashtags = [
+            ...platformTags[selectedPlatform],
+            ...toneTags[selectedTone],
+            ...keywords,
+            ...popularTags,
+            selectedPlatform,
+            selectedTone
+        ];
+
+        // Convert to hashtag format and remove duplicates
+        allHashtags = [...new Set(allHashtags.map(tag => 
+            tag.startsWith('#') ? tag : '#' + tag.replace(/[^a-z0-9]/g, '')
+        ))];
+
+        // Return the requested number of hashtags
+        const count = parseInt(hashtagCount.value);
+        return allHashtags.slice(0, count);
+    }
+
+    // OFFLINE CAPTION GENERATOR (FALLBACK)
+    function generateSmartCaption(description) {
+        // Platform configurations
+        const platforms = {
+            instagram: {
+                emojis: ["✨", "🌟", "💫", "📸", "🔥", "👀", "❤️", "🙏", "🥰"],
+                starters: [
+                    "Living my best life ✨",
+                    "Caught this magical moment 🌟", 
+                    "So grateful for this experience 🙏",
+                    "Dreams really do come true 💫",
+                    "This just happened! 📸"
+                ],
+                endings: [
+                    "What do you think? 👀",
+                    "Never forget this day! ❤️",
+                    "So blessed and grateful 🥰",
+                    "Making memories that last 🌟"
+                ]
+            },
+            facebook: {
+                emojis: ["👥", "🌍", "💬", "👍", "❤️", "😊", "🤗"],
+                starters: [
+                    "Sharing something special with my friends 👥",
+                    "Life update for everyone 🌍",
+                    "Wanted to share this moment with you all 💬"
+                ],
+                endings: [
+                    "Feel free to share your thoughts! 💬",
+                    "Grateful for this community 🤗",
+                    "What's new with you? 😊"
+                ]
+            },
+            twitter: {
+                emojis: ["🐦", "💭", "👆", "👇", "🔁", "💫", "⚡"],
+                starters: [
+                    "Quick update: ",
+                    "So this just happened: ",
+                    "Thread 👇 ",
+                    "Breaking news (to me): "
+                ],
+                endings: [
+                    "RT if you agree 🔁",
+                    "What are your thoughts? 💭",
+                    "This got me thinking 💫"
+                ]
+            },
+            linkedin: {
+                emojis: ["💼", "🚀", "📈", "💡", "🤝", "🎯", "⭐"],
+                starters: [
+                    "Thrilled to share this professional milestone 💼",
+                    "Grateful for this career opportunity 🚀",
+                    "Exciting professional update: "
+                ],
+                endings: [
+                    "Always growing and learning 📈",
+                    "Grateful for the journey 🤝",
+                    "Onwards and upwards! 🎯"
+                ]
+            },
+            tiktok: {
+                emojis: ["🎵", "👀", "💃", "🎬", "😂", "🔥", "⚡"],
+                starters: [
+                    "POV: You just achieved something amazing 🎬",
+                    "Wait for it... 👀",
+                    "You won't believe what just happened! 💃"
+                ],
+                endings: [
+                    "This needs a sound! 🎵",
+                    "Wait for part 2! 👀", 
+                    "Could this get any better? 🔥"
+                ]
+            },
+            general: {
+                emojis: ["👍", "👏", "🎉", "💪", "🌟", "✨"],
+                starters: [
+                    "Sharing something amazing! 🎉",
+                    "Check this out! 👏",
+                    "So excited about this! 💪"
+                ],
+                endings: [
+                    "What an incredible experience! 🌟",
+                    "So grateful for this moment ✨",
+                    "Making memories! 👍"
+                ]
+            }
+        };
+
+        // Tone configurations
+        const tones = {
+            funny: {
+                words: ["LOL", "😂", "Can't stop laughing", "This is hilarious", "Funny story", "You won't believe this"],
+                emojis: ["😂", "🤣", "😆", "💀", "👻"],
+                phrases: [
+                    "This is too funny not to share!",
+                    "Laughing so hard right now!",
+                    "This deserves a comedy award! 🏆"
+                ]
+            },
+            professional: {
+                words: ["Excited to share", "Proud to announce", "Thrilled to present", "Honored to", "Grateful for"],
+                emojis: ["💼", "🚀", "🎯", "⭐", "🏆"],
+                phrases: [
+                    "Another step forward in my journey",
+                    "Hard work paying off",
+                    "Professional growth in action"
+                ]
+            },
+            inspirational: {
+                words: ["Dream big", "Never give up", "Keep pushing", "You've got this", "Believe in yourself"],
+                emojis: ["✨", "🌟", "💫", "🙏", "💖", "🌅"],
+                phrases: [
+                    "The journey continues with renewed energy",
+                    "Every step forward counts",
+                    "Your dreams are valid and achievable"
+                ]
+            },
+            casual: {
+                words: ["Hey everyone", "What's up", "Check this out", "So cool", "Just sharing"],
+                emojis: ["😊", "👍", "👋", "😎", "👌"],
+                phrases: [
+                    "Just living life and enjoying the moments",
+                    "Simple joys make life beautiful",
+                    "Sharing some everyday magic"
+                ]
+            },
+            emotional: {
+                words: ["So grateful", "This means so much", "Feeling blessed", "Overwhelmed with joy"],
+                emojis: ["💖", "😊", "🙏", "🥹", "🥰"],
+                phrases: [
+                    "My heart is so full right now",
+                    "This moment will stay with me forever",
+                    "Overflowing with gratitude and joy"
+                ]
+            },
+            educational: {
+                words: ["Did you know", "Pro tip", "Learn something new", "Knowledge share"],
+                emojis: ["🧠", "💡", "📚", "🤔", "🎓"],
+                phrases: [
+                    "Always learning and growing",
+                    "Knowledge is power, sharing is caring",
+                    "Another lesson learned on this journey"
+                ]
+            },
+            promotional: {
+                words: ["Don't miss out", "Limited time", "Special offer", "Exciting news"],
+                emojis: ["🎉", "🔥", "⚡", "🎁", "🏷️"],
+                phrases: [
+                    "This is too good not to share!",
+                    "Opportunity knocking at the door",
+                    "Big things happening!"
+                ]
+            }
+        };
+
+        const platform = platforms[selectedPlatform] || platforms.general;
+        const tone = tones[selectedTone] || tones.casual;
+
+        // Build the caption
+        const starter = platform.starters[Math.floor(Math.random() * platform.starters.length)];
+        const tonePhrase = tone.phrases[Math.floor(Math.random() * tone.phrases.length)];
+        const ending = platform.endings[Math.floor(Math.random() * platform.endings.length)];
+        
+        const platformEmoji = platform.emojis[Math.floor(Math.random() * platform.emojis.length)];
+        const toneEmoji = tone.emojis[Math.floor(Math.random() * tone.emojis.length)];
+
+        return `${starter} ${description} ${tonePhrase} ${ending} ${platformEmoji}${toneEmoji}`;
+    }
+    
+    // Copy Caption
+    copyCaptionBtn.addEventListener('click', () => {
+      const textToCopy = captionText.textContent + '\n\n' + 
+        Array.from(hashtagsContainer.children).map(el => el.textContent).join(' ');
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Show success feedback
+        const originalText = copyCaptionBtn.innerHTML;
+        copyCaptionBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        copyCaptionBtn.style.background = 'var(--success-color)';
+        
+        setTimeout(() => {
+          copyCaptionBtn.innerHTML = originalText;
+          copyCaptionBtn.style.background = '';
+        }, 2000);
+      });
+    });
+    
+    // Regenerate Caption
+    regenerateBtn.addEventListener('click', () => {
+      generateBtn.click();
+    });
+    
+    // Notification system
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            z-index: 10000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 300px;
+            transition: all 0.3s ease;
+        `;
+        
+        if (type === 'warning') {
+            notification.style.background = 'var(--warning-color)';
+        } else if (type === 'error') {
+            notification.style.background = 'var(--danger-color)';
+        } else {
+            notification.style.background = 'var(--primary-color)';
+        }
+        
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 4000);
+    }
+    
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+      appearOnScroll.observe(element);
+    });
+
+    document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const messageDiv = document.getElementById('form-message');
+  const submitBtn = form.querySelector('.newsletter-btn');
+  const originalText = submitBtn.textContent;
+  
+  // Show loading state
+  submitBtn.textContent = 'Subscribing...';
+  submitBtn.disabled = true;
+  
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    
+    if (response.ok) {
+      messageDiv.textContent = 'Thank you! You have successfully subscribed.';
+      messageDiv.style.display = 'block';
+      messageDiv.style.backgroundColor = '#d4edda';
+      messageDiv.style.color = '#155724';
+      messageDiv.style.border = '1px solid #c3e6cb';
+      form.reset();
+    } else {
+      throw new Error('Form submission failed');
+    }
+  } catch (error) {
+    messageDiv.textContent = 'Sorry, there was an error. Please try again.';
+    messageDiv.style.display = 'block';
+    messageDiv.style.backgroundColor = '#f8d7da';
+    messageDiv.style.color = '#721c24';
+    messageDiv.style.border = '1px solid #f5c6cb';
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
+  
+  return false; // Add this line
+});
+  </script>
+</body>
+</html>

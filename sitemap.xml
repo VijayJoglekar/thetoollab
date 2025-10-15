@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 🔹 Main Pages -->
+  <url>
+    <loc>https://thetoollab.netlify.app/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://thetoollab.netlify.app/homepage</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://thetoollab.netlify.app/about</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://thetoollab.netlify.app/contactus</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://thetoollab.netlify.app/privacy-policy</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 🔹 Tools Pages -->
+  <url><loc>https://thetoollab.netlify.app/tools/agecalculator</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/captioncreator</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/html-formatter</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/imagecompressor</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/imgtopdf</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/json-formatter</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/numberbaseconvertor</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/password-generator</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/pdf-compressor</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/pdfmerger</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/pdfspitter</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/pdftoimg</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/qrcodegenerator</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/temperature-converter</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/textcaseconvertor</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thetoollab.netlify.app/tools/word-counter</loc><lastmod>2025-10-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+</urlset>

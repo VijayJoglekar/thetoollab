@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolLab - 100% Free Online Tools | No Signup Required</title>
+  <meta name="description" content="ToolLab offers completely free online tools - no signup, no hidden fees. Fast, secure, and privacy-focused tools for all your digital needs.">
+  <meta name="keywords" content="free online tools, no signup tools, text tools, image tools, PDF tools, developer tools, privacy-focused tools">
+  <meta name="google-adsense-account" content="ca-pub-1579994484328521">
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ToolLab">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ToolLab - 100% Free Online Tools | No Signup Required">
+  <meta property="og:description" content="ToolLab offers completely free online tools - no signup, no hidden fees. Fast, secure, and privacy-focused tools for all your digital needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetoollab.netlify.app/homepage.html">
+  <meta property="og:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta property="og:site_name" content="ToolLab">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ToolLab - 100% Free Online Tools | No Signup Required">
+  <meta name="twitter:description" content="ToolLab offers completely free online tools - no signup, no hidden fees. Fast, secure, and privacy-focused tools for all your digital needs.">
+  <meta name="twitter:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="Photos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Photos/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Photos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Photos/favicon-16x16.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thetoollab.netlify.app/homepage.html">
+  
+  
+  <!-- Add Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+   <!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ToolLab",
+  "description": "Completely free online tools with no signup required",
+  "url": "https://thetoollab.netlify.app/homepage.html",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://thetoollab.netlify.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolLab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thetoollab.netlify.app/Photos/Logo.png"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ToolLab",
+  "url": "https://thetoollab.netlify.app/",
+  "logo": "https://thetoollab.netlify.app/Photos/Logo.png",
+  "description": "Free online tools platform providing text, image, PDF, and developer tools with no signup required",
+  "sameAs": [
+    "https://www.instagram.com/bramha_intelligence",
+    "https://www.linkedin.com/in/joglekarvijay03",
+    "https://github.com/VijayJoglekar"
+  ]
+}
+</script>
+  
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --primary-color: #7F00FF;
+      --secondary-color: #E100FF;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #7F00FF, #E100FF);
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+      --footer-bg: #111;
+    }
+
+    .dark-mode {
+      --primary-color: #9d4edd;
+      --secondary-color: #c77dff;
+      --background-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(90deg, #5a189a, #7b2cbf);
+      --shadow: 0 4px 10px rgba(0,0,0,0.2);
+      --footer-bg: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Image Styles */
+    .content-image {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .content-image:hover {
+      transform: scale(1.02);
+    }
+
+    .hero-image {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .feature-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* Layout with Images */
+    .image-text-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 5%;
+    }
+
+    .image-left .section-image {
+      order: 1;
+    }
+
+    .image-left .section-content {
+      order: 2;
+    }
+
+    .image-right .section-image {
+      order: 2;
+    }
+
+    .image-right .section-content {
+      order: 1;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-bg);
+      padding: 10px 20px;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .badge i {
+      color: var(--primary-color);
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Loading animation */
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: var(--header-bg);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 35px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 80px 5% 60px;
+      background: var(--header-bg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin: 0 auto 20px;
+    }
+
+    .cta-btn {
+      margin-top: 20px;
+      background-color: white;
+      color: var(--primary-color);
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      font-weight: 600;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.5s;
+      z-index: -1;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn:hover::before {
+      left: 100%;
+    }
+
+    /* ---------- TOOL SECTIONS ---------- */
+    .section {
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: var(--primary-color);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tool-card {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .tool-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tool-card h3 {
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+      transition: transform 0.3s ease;
+    }
+
+    .tool-card:hover .tool-icon {
+      transform: scale(1.2);
+    }
+
+    /* ---------- FEATURES SECTION ---------- */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      padding: 20px 15px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover .feature-icon {
+      transform: scale(1.2);
+    }
+
+    /* ---------- BENEFITS SECTION ---------- */
+    .benefits {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: var(--shadow);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 20px;
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    .benefit-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+
+    /* ---------- ENHANCED FOOTER ---------- */
+    .footer-main {
+      background-color: var(--footer-bg);
+      color: #ccc;
+      padding: 60px 5% 30px;
+      transition: background-color 0.5s ease;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .footer-column p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-links i {
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-newsletter {
+      margin-top: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .newsletter-input::placeholder {
+      color: #aaa;
+    }
+
+    .newsletter-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #ccc;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    /* Large screens */
+    @media (min-width: 1200px) {
+      .section {
+        padding: 80px 10%;
+      }
+      
+      nav {
+        padding: 15px 10%;
+      }
+      
+      .footer-main, .footer-bottom {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    }
+
+    /* Tablets and small laptops */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .image-text-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .image-left .section-image,
+      .image-right .section-image {
+        order: 1;
+      }
+      
+      .image-left .section-content,
+      .image-right .section-content {
+        order: 2;
+      }
+    }
+
+    /* Tablets */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 5% 40px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section h2 {
+        font-size: 1.7rem;
+      }
+      
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .nav-links a span {
+        display: none;
+      }
+      
+      .nav-links a i {
+        font-size: 1.2rem;
+      }
+      
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-legal {
+        justify-content: center;
+      }
+      
+      .benefits {
+        padding: 30px 20px;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 576px) {
+      nav {
+        padding: 12px 5%;
+      }
+      
+      .logo-img {
+        height: 30px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+      
+      .nav-links a span {
+        display: inline;
+      }
+      
+      .hero {
+        padding: 50px 5% 30px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section {
+        padding: 40px 5%;
+      }
+      
+      .section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+      
+      .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .tool-card {
+        padding: 20px 15px;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      .feature-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 15px 20px;
+      }
+      
+      .cta-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .footer-main {
+        padding: 40px 5% 20px;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .trust-badges {
+        gap: 15px;
+      }
+      
+      .badge {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Small mobile phones */
+    @media (max-width: 375px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .tool-icon {
+        font-size: 2rem;
+      }
+      
+      .feature-item {
+        padding: 12px 15px;
+      }
+    }
+  </style>
+
+   <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1579994484328521"
+     crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <!-- Replace this with your logo image -->
+      <img src="Photos/Logo.png" alt="ToolLab Logo" class="logo-img">
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html"><i class="fas fa-tools"></i> <span>Tools</span></a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> <span>About</span></a>
+      <a href="Contactus.html"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">All Tools, 100% Free – No Hidden Fees!</h1>
+      <div class="hero-subtitle fade-in">Use Powerful Tools Without Signing Up</div>
+      <p class="fade-in">Fast, reliable, and ready to use in seconds. Your one-stop toolbox with everything you need.</p>
+      
+      <!-- Hero Image - Girl using phone -->
+      <img src="Photos/Hero.jpg" alt="Girl using ToolLab on her phone" class="hero-image fade-in">
+      
+      <div class="trust-badges fade-in">
+        <div class="badge">
+          <i class="fas fa-lock"></i>
+          <span style="color:#7F00FF ;">Privacy First</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-bolt"></i>
+          <span style="color:#7F00FF ;">Instant Results</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-user-shield"></i>
+          <span style="color:#7F00FF ;">No Signup Required</span>
+        </div>
+      </div>
+      
+      <button class="cta-btn fade-in"><i class="fas fa-rocket"></i><a href="index.html"> Explore Free Tools </a></button>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 1 -->
+  <div class="image-text-section image-right fade-in">
+    <div class="section-image">
+      <img src="Photos/user-interface-1-72.png" alt="ToolLab interface showing various tools" class="content-image">
+    </div>
+    <div class="section-content">
+      <h2>Easy-to-Use Interface</h2>
+      <p>Our intuitive design makes it simple for anyone to access powerful tools without any learning curve. Everything is organized and accessible in just one click.</p>
+      <p>No complicated menus or hidden features - just straightforward tools that work exactly as you expect them to.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="fade-in"><i class="fas fa-fire"></i> Most Popular Free Tools</h2>
+    <div class="tools-grid">
+      <div class="tool-card fade-in">
+        <div class="tool-icon"><i class="fas fa-font"></i></div>
+        <h3>Text Converter</h3>
+        <p>Convert text cases, remove spaces, or count characters instantly. No registration needed.</p>
+      </div>
+      <div class="tool-card fade-in">
+        <div class="tool-icon"><i class="fas fa-file-image"></i></div>
+        <h3>Image Compressor</h3>
+        <p>Reduce image size without losing quality — completely free and secure.</p>
+      </div>
+      <div class="tool-card fade-in">
+        <div class="tool-icon"><i class="fas fa-key"></i></div>
+        <h3>Password Generator</h3>
+        <p>Create strong and unique passwords to stay protected online. 100% free forever.</p>
+      </div>
+      <div class="tool-card fade-in">
+        <div class="tool-icon"><i class="fas fa-file-export"></i></div>
+        <h3>File Converter</h3>
+        <p>Convert PDFs, Word, Excel, and more — all in your browser. No downloads required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 2 -->
+  <div class="image-text-section image-left fade-in">
+    <div class="section-content">
+      <h2>Privacy & Security First</h2>
+      <p>Your data never leaves your device. All processing happens locally in your browser, ensuring complete privacy and security.</p>
+      <p>We believe in transparency - that's why we don't require accounts, don't track your usage, and don't store your files.</p>
+      <div class="trust-badges" style="justify-content: flex-start; margin-top: 20px;">
+        <div class="badge">
+          <i class="fas fa-shield-alt"></i>
+          <span style="color:#7F00FF ;">Local Processing</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-database"></i>
+          <span style="color:#7F00FF ;">No Data Storage</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-image">
+      <img src="Photos/cybersecurity-39.png" alt="Security and privacy features of ToolLab" class="content-image">
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="fade-in"><i class="fas fa-star"></i> Why Choose ToolLab?</h2>
+    <div class="features">
+      <div class="feature-item fade-in">
+        <i class="fas fa-dollar-sign feature-icon"></i>
+        <span>100% Free Forever</span>
+      </div>
+      <div class="feature-item fade-in">
+        <i class="fas fa-shield-alt feature-icon"></i>
+        <span>Privacy Friendly</span>
+      </div>
+      <div class="feature-item fade-in">
+        <i class="fas fa-bolt feature-icon"></i>
+        <span>Super Fast</span>
+      </div>
+      <div class="feature-item fade-in">
+        <i class="fas fa-mobile-alt feature-icon"></i>
+        <span>Works Everywhere</span>
+      </div>
+      <div class="feature-item fade-in">
+        <i class="fas fa-user-slash feature-icon"></i>
+        <span>No Signup Required</span>
+      </div>
+      <div class="feature-item fade-in">
+        <i class="fas fa-infinity feature-icon"></i>
+        <span>Unlimited Usage</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 3 -->
+  <div class="image-text-section image-right fade-in">
+    <div class="section-image">
+      <img src="Photos/Screenshot 2025-10-08 210110.png" alt="ToolLab working across multiple devices" class="content-image">
+    </div>
+    <div class="section-content">
+      <h2>Works on All Devices</h2>
+      <p>Access ToolLab from your computer, tablet, or smartphone. Our responsive design ensures a seamless experience no matter what device you're using.</p>
+      <p>Whether you're at home, in the office, or on the go, your favorite tools are always just a click away.</p>
+      <div class="trust-badges" style="justify-content: flex-start; margin-top: 20px;">
+        <div class="badge">
+          <i class="fas fa-laptop"></i>
+          <span style="color:#7F00FF ;">Desktop</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-tablet-alt"></i>
+          <span style="color:#7F00FF ;">Tablet</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-mobile-alt"></i>
+          <span style="color:#7F00FF ;">Mobile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="benefits fade-in">
+      <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 40px;">
+        <i class="fas fa-check-circle"></i> What Makes ToolLab Different
+      </h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Truly Free Forever</h3>
+            <p>No hidden costs, no premium tiers, no credit card required. All tools are completely free with no limitations.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Zero Signup Hassle</h3>
+            <p>Start using any tool immediately without creating an account. Your privacy and time matter to us.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Lightning Fast</h3>
+            <p>Optimized for speed with instant results. No waiting, no processing delays - just fast tools.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Your Data Stays Yours</h3>
+            <p>We don't store or collect your files or data. Everything processes locally in your browser for maximum privacy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 4 -->
+  <div class="image-text-section image-left fade-in">
+    <div class="section-content">
+      <h2>Join Thousands of Happy Users</h2>
+      <p>ToolLab is trusted by individuals, students, professionals, and businesses worldwide. Our commitment to free, accessible tools has helped millions complete their tasks efficiently.</p>
+      <p>See why users love our platform and how it can transform your workflow today.</p>
+      <button class="cta-btn" style="margin-top: 20px;"><i class="fas fa-play"></i> Get Started Now</button>
+    </div>
+    <div class="section-image">
+      <img src="Photos/user-group-70.png" alt="Community and user satisfaction with ToolLab" class="content-image">
+    </div>
+  </div>
+
+  <!-- Enhanced Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About ToolLab</h3>
+        <p>ToolLab provides a comprehensive suite of completely free online tools with no signup required. Our mission is to make your digital tasks simpler, faster, and more secure without any cost or commitment.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/bramha_intelligence" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joglekarvijay03" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VijayJoglekar" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Free Tools</h3>
+        <ul class="footer-links">
+           <li><a href="../index.html"><i class="fas fa-chevron-right"></i> All Free Tools</a></li>
+          <li><a href="QRcodegenerator.html"><i class="fas fa-chevron-right"></i> QR Code Generator</a></li>
+          <li><a href="password-generator.html"><i class="fas fa-chevron-right"></i> Password Generator</a></li>
+          <li><a href="NumberBaseConvertor.html"><i class="fas fa-chevron-right"></i> Number base Changer</a></li>
+          <li><a href="pdfspitter.html"><i class="fas fa-chevron-right"></i> PDF File Splitter</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Features </a></li>
+          <li><a href="Contactus.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter to receive updates on new free tools and features.</p>
+                <div class="footer-newsletter">
+                    <form class="newsletter-form" action="https://formspree.io/f/xkgqqbzk" method="POST">
+                        <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                    <div id="form-message" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+  </footer>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <div class="footer-copyright">
+        <p>© 2025 ToolLab. All rights reserved. | 100% Free Online Tools</p>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+       
+        <a href="privacy-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dark/Light mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+      appearOnScroll.observe(element);
+    });
+
+    // Loading animation for CTA button
+    const ctaButton = document.querySelector('.cta-btn');
+    ctaButton.addEventListener('click', function() {
+      const originalHTML = this.innerHTML;
+      this.innerHTML = '<span class="loading"></span> Loading Tools...';
+      this.disabled = true;
+      
+      // Simulate loading
+      setTimeout(() => {
+        this.innerHTML = originalHTML;
+        this.disabled = false;
+        alert('All free tools would load here! No signup required.');
+      }, 1500);
+    });
+
+    // Formspree newsletter form handling
+        const newsletterForm = document.querySelector('.newsletter-form');
+        const formMessage = document.getElementById('form-message');
+        
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('.newsletter-btn');
+                const originalText = submitBtn.textContent;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                submitBtn.disabled = true;
+                
+                try {
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formMessage.textContent = 'Thank you! You have successfully subscribed.';
+                        formMessage.className = 'form-message success';
+                        formMessage.style.display = 'block';
+                        this.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    formMessage.textContent = 'Sorry, there was an error. Please try again.';
+                    formMessage.className = 'form-message error';
+                    formMessage.style.display = 'block';
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                }
+            });
+        }
+    // Image lazy loading
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img');
+      
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(img => {
+        if (img.classList.contains('lazy')) {
+          imageObserver.observe(img);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

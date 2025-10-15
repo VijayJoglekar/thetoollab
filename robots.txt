@@ -1,0 +1,13 @@
+# robots.txt for TheToolLab
+# This file tells search engines how to crawl your site
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /test/
+
+# Point to your sitemap for better SEO
+Sitemap: https://thetoollab.netlify.app/sitemap.xml

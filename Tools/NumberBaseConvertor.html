@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Base Converter - Convert Binary, Decimal, Hex | ToolLab</title>
+  <meta name="description" content="Free Number Base Converter - Convert between binary, decimal, hexadecimal, and octal instantly. Perfect for developers, students, and programmers.">
+  <meta name="keywords" content="number base converter, binary to decimal, hex converter, octal converter, binary calculator, programming tools, decimal to binary, hexadecimal converter">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ToolLab">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Number Base Converter - Convert Binary, Decimal, Hex | ToolLab">
+  <meta property="og:description" content="Free Number Base Converter - Convert between binary, decimal, hexadecimal, and octal instantly. Perfect for developers, students, and programmers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetoollab.netlify.app/tools/NumberBaseConvertor.html">
+  <meta property="og:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta property="og:site_name" content="ToolLab">
+  <meta name="google-adsense-account" content="ca-pub-1579994484328521">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Number Base Converter - Convert Binary, Decimal, Hex | ToolLab">
+  <meta name="twitter:description" content="Free Number Base Converter - Convert between binary, decimal, hexadecimal, and octal instantly. Perfect for developers, students, and programmers.">
+  <meta name="twitter:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../Photos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../Photos/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Photos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Photos/favicon-16x16.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thetoollab.netlify.app/tools/NumberBaseConvertor.html">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Number Base Converter",
+    "description": "Free online tool to convert between binary, decimal, hexadecimal, and octal number systems instantly",
+    "url": "https://thetoollab.netlify.app/tools/NumberBaseConvertor.html",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "permissions": "none",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "url": "https://thetoollab.netlify.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoollab.netlify.app/Photos/Logo.png"
+      }
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1579994484328521"
+     crossorigin="anonymous"></script>
+    
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --primary-color: #7F00FF;
+      --secondary-color: #E100FF;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #7F00FF, #E100FF);
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+      --footer-bg: #111;
+    }
+
+    .dark-mode {
+      --primary-color: #9d4edd;
+      --secondary-color: #c77dff;
+      --background-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(90deg, #5a189a, #7b2cbf);
+      --shadow: 0 4px 10px rgba(0,0,0,0.2);
+      --footer-bg: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: var(--header-bg);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 35px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--card-bg);
+      min-width: 280px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      z-index: 1001;
+      padding: 15px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content h4 {
+      color: var(--primary-color);
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .dropdown-content a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      color: var(--text-color);
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(127, 0, 255, 0.1);
+    }
+
+    .dropdown-content a i {
+      color: var(--primary-color);
+      width: 20px;
+      text-align: center;
+    }
+
+    .coming-soon {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 60px 5% 40px;
+      background: var(--header-bg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0 auto 20px;
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 5%;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-section, .output-section {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .input-section::before, .output-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: var(--primary-color);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background: var(--card-bg);
+      color: var(--text-color);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    }
+
+    .base-input-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .base-input-group select {
+      flex: 0 0 120px;
+    }
+
+    .base-input-group input {
+      flex: 1;
+    }
+
+    .btn-convert {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-convert:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Results Grid */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .result-item {
+      background: var(--background-color);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .result-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .result-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      word-break: break-all;
+      font-family: 'Courier New', monospace;
+    }
+
+    .copy-btn {
+      background: rgba(127, 0, 255, 0.1);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: var(--primary-color);
+      font-size: 0.8rem;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Quick Conversions */
+    .quick-conversions {
+      margin-top: 20px;
+    }
+
+    .quick-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .quick-btn {
+      background: var(--background-color);
+      border: 2px solid #e9ecef;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .quick-btn:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .quick-btn.active {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+    }
+
+    /* Usage Tips */
+    .usage-tips {
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: var(--shadow);
+    }
+
+    .usage-tips h3 {
+      margin-bottom: 15px;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .usage-tips ul {
+      padding-left: 20px;
+    }
+
+    .usage-tips li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .usage-tips li i {
+      color: var(--primary-color);
+    }
+
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* ---------- ENHANCED FOOTER ---------- */
+    .footer-main {
+      background-color: var(--footer-bg);
+      color: #ccc;
+      padding: 60px 5% 30px;
+      transition: background-color 0.5s ease;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .footer-column p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-links i {
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #ccc;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    /* Tablets */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 5% 30px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .nav-links a span {
+        display: none;
+      }
+      
+      .nav-links a i {
+        font-size: 1.2rem;
+      }
+      
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-legal {
+        justify-content: center;
+      }
+      
+      .base-input-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .base-input-group select {
+        flex: 1;
+        width: 100%;
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 576px) {
+      nav {
+        padding: 12px 5%;
+      }
+      
+      .logo-img {
+        height: 30px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+      
+      .nav-links a span {
+        display: inline;
+      }
+
+      /* Mobile dropdown styles */
+      .dropdown-content {
+        position: static;
+        max-height: 60vh;
+        overflow-y: auto;
+        margin-top: 10px;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: none;
+        animation: slideDown 0.3s ease;
+      }
+      
+      @keyframes slideDown {
+        from { 
+          opacity: 0;
+          max-height: 0;
+        }
+        to { 
+          opacity: 1;
+          max-height: 60vh;
+        }
+      }
+      
+      .dropdown.active .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown-toggle .fa-chevron-down {
+        transition: transform 0.3s ease;
+      }
+      
+      .dropdown.active .dropdown-toggle .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+      
+      .dropdown-content a {
+        color: white;
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        border-left: 3px solid transparent;
+      }
+      
+      .dropdown-content a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-left-color: var(--secondary-color);
+      }
+      
+      .dropdown-content a i {
+        color: white;
+      }
+      
+      .dropdown-content h4 {
+        color: white;
+        border-bottom-color: rgba(255,255,255,0.3);
+        margin-top: 15px;
+      }
+      
+      .dropdown-content h4:first-child {
+        margin-top: 0;
+      }
+      
+      .hero {
+        padding: 40px 5% 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .container {
+        padding: 20px 5%;
+      }
+      
+      .input-section, .output-section {
+        padding: 20px;
+      }
+      
+      .quick-buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="../Photos/Logo.png" alt="ToolLab Logo" class="logo-img">
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a>
+      
+      <!-- Tools Dropdown -->
+      <div class="dropdown" id="toolsDropdown">
+        <a href="#" class="dropdown-toggle"><i class="fas fa-tools"></i> <span>Tools</span> <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <h4>Most Popular</h4>
+          <a href="password-generator.html"><i class="fas fa-key"></i> Password Generator</a>
+          <a href="QRcodegenerator.html"><i class="fas fa-qrcode"></i> QR Code Generator</a>
+          <a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a>
+          <a href="PdfMerger.html"><i class="fas fa-object-group"></i> PDF Merger</a>
+
+          <h4>Text Tools</h4>
+          <a href="TextCaseConvertor.html"><i class="fas fa-text-height"></i> Case Converter</a>
+          <a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a>
+          <a href="remove-spaces.html"><i class="fas fa-eraser"></i> Remove Spaces</a>
+          <a href="text-reverser.html"><i class="fas fa-retweet"></i> Text Reverser</a>
+          <a href="character-frequency.html"><i class="fas fa-chart-bar"></i> Character Frequency</a>
+          <a href="text-styler.html"><i class="fas fa-paint-brush"></i> Text Styler</a>
+          <a href="whatsapp-formatter.html"><i class="fab fa-whatsapp"></i> WhatsApp Formatter</a>
+          <a href="paragraph-generator.html"><i class="fas fa-paragraph"></i> Paragraph Generator</a>
+
+          <h4>Image Tools</h4>
+          <a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a>
+          <a href="ImgToPdf.html"><i class="fas fa-file-pdf"></i> Image to PDF</a>
+          <a href="image-resizer.html"><i class="fas fa-expand-alt"></i> Image Resizer</a>
+          <a href="image-converter.html"><i class="fas fa-sync"></i> Image Converter</a>
+          <a href="image-to-base64.html"><i class="fas fa-code"></i> Image to Base64</a>
+
+          <h4>PDF Tools</h4>
+          <a href="PdfMerger.html"><i class="fas fa-object-group"></i> PDF Merger</a>
+          <a href="pdfspitter.html"><i class="fas fa-cut"></i> PDF Splitter</a>
+          <a href="pdfToImg.html"><i class="fas fa-file-image"></i> PDF to Image</a>
+          <a href="pdf-compressor.html"><i class="fas fa-file-archive"></i> PDF Compressor</a>
+
+          <h4>Developer Tools</h4>
+          <a href="NumberBaseConvertor.html"><i class="fas fa-superscript"></i> Number Base Converter</a>
+          <a href="json-formatter.html"><i class="fas fa-code"></i> JSON Formatter</a>
+          <a href="html-formatter.html"><i class="fab fa-html5"></i> HTML Formatter</a>
+          <a href="css-formatter.html"><i class="fab fa-css3-alt"></i> CSS Formatter</a>
+          <a href="javascript-formatter.html"><i class="fab fa-js"></i> JavaScript Formatter</a>
+          <a href="base64-encoder.html"><i class="fas fa-lock"></i> Base64 Encoder</a>
+          <a href="markdown-editor.html"><i class="fas fa-markdown"></i> Markdown Editor</a>
+
+          <h4>Converters</h4>
+          <a href="temperature-converter.html"><i class="fas fa-thermometer-half"></i> Temperature Converter</a>
+          <a href="NumberBaseConvertor.html"><i class="fas fa-superscript"></i> Number Base Converter</a>
+          <a href="unit-converter.html"><i class="fas fa-balance-scale"></i> Unit Converter</a>
+          <a href="color-converter.html"><i class="fas fa-palette"></i> Color Converter</a>
+          <a href="time-zone-converter.html"><i class="fas fa-clock"></i> Time Zone Converter</a>
+
+          <h4>Utility Tools</h4>
+          <a href="AgeCalculator.html"><i class="fas fa-birthday-cake"></i> Age Calculator</a>
+          <a href="CaptionCreator.html"><i class="fas fa-comment-alt"></i> Caption Creator</a>
+        </div>
+      </div>
+      
+      <a href="../about.html"><i class="fas fa-info-circle"></i> <span>About</span></a>
+      <a href="../contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+            <a href="../homepage.html" style="color: gold;"><i class="fas fa-star"></i> <span>Features</span></a>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Number Base Converter</h1>
+      <div class="hero-subtitle">Convert Between Binary, Decimal, Hex & Octal</div>
+      <p>Instant conversions for developers, students, and programmers. 100% free with no signup required.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="input-section">
+        <h2 class="section-title"><i class="fas fa-calculator"></i> Convert Number</h2>
+        
+        <div class="form-group">
+          <label for="input-base"><i class="fas fa-sign-in-alt"></i> From Base</label>
+          <select id="input-base">
+            <option value="2">Binary (Base 2)</option>
+            <option value="8">Octal (Base 8)</option>
+            <option value="10" selected>Decimal (Base 10)</option>
+            <option value="16">Hexadecimal (Base 16)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="input-number"><i class="fas fa-keyboard"></i> Enter Number</label>
+          <input type="text" id="input-number" placeholder="Enter number to convert..." value="255">
+        </div>
+
+        <button class="btn-convert" onclick="convertNumber()">
+          <i class="fas fa-sync-alt"></i> Convert Number
+        </button>
+
+        <div class="quick-conversions">
+          <label><i class="fas fa-bolt"></i> Quick Examples:</label>
+          <div class="quick-buttons">
+            <button class="quick-btn" onclick="setExample('255', '10')">255 (Dec)</button>
+            <button class="quick-btn" onclick="setExample('11111111', '2')">11111111 (Bin)</button>
+            <button class="quick-btn" onclick="setExample('FF', '16')">FF (Hex)</button>
+            <button class="quick-btn" onclick="setExample('377', '8')">377 (Oct)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="output-section">
+        <h2 class="section-title"><i class="fas fa-list-alt"></i> Conversion Results</h2>
+        
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-label">
+              <i class="fas fa-binary" style="color: #E100FF;"></i> Binary (Base 2)
+              <button class="copy-btn" onclick="copyToClipboard('binary-result')">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="result-value" id="binary-result">11111111</div>
+          </div>
+          
+          <div class="result-item">
+            <div class="result-label">
+              <i class="fas fa-sort-numeric-up" style="color: #7F00FF;"></i> Decimal (Base 10)
+              <button class="copy-btn" onclick="copyToClipboard('decimal-result')">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="result-value" id="decimal-result">255</div>
+          </div>
+          
+          <div class="result-item">
+            <div class="result-label">
+              <i class="fas fa-hashtag" style="color: #FF6B6B;"></i> Hexadecimal (Base 16)
+              <button class="copy-btn" onclick="copyToClipboard('hex-result')">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="result-value" id="hex-result">FF</div>
+          </div>
+          
+          <div class="result-item">
+            <div class="result-label">
+              <i class="fas fa-cube" style="color: #4ECDC4;"></i> Octal (Base 8)
+              <button class="copy-btn" onclick="copyToClipboard('octal-result')">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <div class="result-value" id="octal-result">377</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="usage-tips">
+      <h3><i class="fas fa-lightbulb"></i> Number Base Tips:</h3>
+      <ul>
+        <li><i class="fas fa-check"></i> <strong>Binary</strong> uses only 0 and 1 (Base 2)</li>
+        <li><i class="fas fa-check"></i> <strong>Octal</strong> uses digits 0-7 (Base 8)</li>
+        <li><i class="fas fa-check"></i> <strong>Decimal</strong> uses digits 0-9 (Base 10)</li>
+        <li><i class="fas fa-check"></i> <strong>Hexadecimal</strong> uses 0-9 and A-F (Base 16)</li>
+        <li><i class="fas fa-check"></i> Hex letters are case-insensitive (A-F or a-f)</li>
+      </ul>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Instant Conversion</h3>
+        <p>Real-time conversions as you type with no delays</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-clipboard"></i></div>
+        <h3>Easy Copy</h3>
+        <p>One-click copy for each number base format</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Friendly</h3>
+        <p>Works perfectly on all devices and screen sizes</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Privacy First</h3>
+        <p>All conversions happen locally in your browser</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About ToolLab</h3>
+        <p>ToolLab provides a comprehensive suite of completely free online tools with no signup required. Our mission is to make your digital tasks simpler, faster, and more secure.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/bramha_intelligence" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joglekarvijay03" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VijayJoglekar" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="../about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Popular Tools</h3>
+        <ul class="footer-links">
+          <li><a href="password-generator.html"><i class="fas fa-key"></i> Password Generator</a></li>
+          <li><a href="QRcodegenerator.html"><i class="fas fa-qrcode"></i> QR Code Generator</a></li>
+          <li><a href="TextCaseConvertor.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+          <li><a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <div class="footer-copyright">
+        <p>© 2025 ToolLab. All rights reserved. | 100% Free Online Tools</p>
+      </div>
+      <div class="footer-legal">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Number Base Conversion Logic
+    function convertNumber() {
+      const inputNumber = document.getElementById('input-number').value.trim().toUpperCase();
+      const inputBase = parseInt(document.getElementById('input-base').value);
+      
+      // Validate input
+      if (!inputNumber) {
+        alert('Please enter a number to convert');
+        return;
+      }
+      
+      try {
+        // Convert to decimal first
+        const decimalValue = parseInt(inputNumber, inputBase);
+        
+        if (isNaN(decimalValue)) {
+          throw new Error('Invalid number for the selected base');
+        }
+        
+        // Convert to all bases
+        document.getElementById('binary-result').textContent = decimalValue.toString(2);
+        document.getElementById('decimal-result').textContent = decimalValue.toString(10);
+        document.getElementById('hex-result').textContent = decimalValue.toString(16).toUpperCase();
+        document.getElementById('octal-result').textContent = decimalValue.toString(8);
+        
+      } catch (error) {
+        alert('Error: ' + error.message + '\nPlease check your input and selected base.');
+      }
+    }
+
+    // Set example values
+    function setExample(number, base) {
+      document.getElementById('input-number').value = number;
+      document.getElementById('input-base').value = base;
+      convertNumber();
+    }
+
+    // Copy to clipboard function
+    function copyToClipboard(elementId) {
+      const element = document.getElementById(elementId);
+      const text = element.textContent;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        // Show temporary feedback
+        const originalText = element.textContent;
+        element.textContent = 'Copied!';
+        element.style.color = '#7F00FF';
+        
+        setTimeout(() => {
+          element.textContent = originalText;
+          element.style.color = '';
+        }, 1500);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy to clipboard');
+      });
+    }
+
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Dark mode toggle
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = themeToggle.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+          icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+          icon.classList.replace('fa-sun', 'fa-moon');
+        }
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const toolsDropdown = document.getElementById('toolsDropdown');
+      
+      menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('active');
+        
+        // Toggle menu icon
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+          icon.classList.replace('fa-times', 'fa-bars');
+          // Close dropdown when closing mobile menu
+          toolsDropdown.classList.remove('active');
+        }
+      });
+
+      // Dropdown functionality
+      const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
+      
+      // Toggle dropdown on click
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // For mobile: only toggle dropdown, don't close navbar
+        if (window.innerWidth <= 576) {
+          toolsDropdown.classList.toggle('active');
+        } else {
+          // For desktop: normal dropdown behavior
+          toolsDropdown.classList.toggle('active');
+        }
+      });
+
+      // Close dropdown when clicking outside (for desktop)
+      document.addEventListener('click', function(e) {
+        if (!toolsDropdown.contains(e.target) && window.innerWidth > 576) {
+          toolsDropdown.classList.remove('active');
+        }
+      });
+
+      // Close mobile menu when clicking on regular links (not dropdown toggle)
+      const navLinksList = navLinks.querySelectorAll('a:not(.dropdown-toggle)');
+      navLinksList.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 576) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            toolsDropdown.classList.remove('active');
+          }
+        });
+      });
+
+      // Close dropdown when clicking on dropdown links (in mobile)
+      const dropdownLinks = toolsDropdown.querySelectorAll('.dropdown-content a');
+      dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 576) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            toolsDropdown.classList.remove('active');
+          }
+        });
+      });
+
+      // Auto-convert on page load
+      convertNumber();
+      
+      // Auto-convert when input changes
+      document.getElementById('input-number').addEventListener('input', convertNumber);
+      document.getElementById('input-base').addEventListener('change', convertNumber);
+
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 576) {
+          // Reset mobile menu state when switching to desktop
+          navLinks.classList.remove('active');
+          menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+          toolsDropdown.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

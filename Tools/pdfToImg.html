@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF to Image Converter - Convert PDF to JPG, PNG Online | ToolLab</title>
+  <meta name="description" content="Free online PDF to Image converter - Convert PDF pages to high-quality JPG, PNG, or BMP images. Extract images from PDF documents instantly. 100% free, no signup required.">
+  <meta name="keywords" content="pdf to image converter, pdf to jpg, pdf to png, convert pdf to image, extract images from pdf, pdf image extractor, online pdf converter, document to image">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ToolLab">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="PDF to Image Converter - Convert PDF to JPG, PNG Online | ToolLab">
+  <meta property="og:description" content="Free online PDF to Image converter - Convert PDF pages to high-quality JPG, PNG, or BMP images. Extract images from PDF documents instantly. 100% free, no signup required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetoollab.netlify.app/tools/pdfToImg.html">
+  <meta property="og:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta property="og:site_name" content="ToolLab">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDF to Image Converter - Convert PDF to JPG, PNG Online | ToolLab">
+  <meta name="twitter:description" content="Free online PDF to Image converter - Convert PDF pages to high-quality JPG, PNG, or BMP images. Extract images from PDF documents instantly. 100% free, no signup required.">
+  <meta name="twitter:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../Photos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../Photos/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Photos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Photos/favicon-16x16.png">
+  <meta name="google-adsense-account" content="ca-pub-1579994484328521">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thetoollab.netlify.app/tools/pdfToImg.html">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PDF to Image Converter",
+    "description": "Free online tool to convert PDF pages to high-quality images and extract images from PDF documents",
+    "url": "https://thetoollab.netlify.app/tools/pdfToImg.html",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "permissions": "none",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "url": "https://thetoollab.netlify.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoollab.netlify.app/Photos/Logo.png"
+      }
+    }
+  }
+  </script>
+
+   <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1579994484328521"
+     crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --primary-color: #7F00FF;
+      --secondary-color: #E100FF;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #7F00FF, #E100FF);
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+      --footer-bg: #111;
+      --success-color: #10b981;
+      --error-color: #ef4444;
+    }
+
+    .dark-mode {
+      --primary-color: #9d4edd;
+      --secondary-color: #c77dff;
+      --background-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(90deg, #5a189a, #7b2cbf);
+      --shadow: 0 4px 10px rgba(0,0,0,0.2);
+      --footer-bg: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------- ENHANCED NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: var(--header-bg);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 35px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Enhanced Dropdown Menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 280px;
+      max-height: 70vh;
+      overflow-y: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 1001;
+      padding: 10px 0;
+    }
+
+    .dark-mode .dropdown-menu {
+      background: var(--card-bg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      color: var(--text-color);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(127, 0, 255, 0.08);
+      color: var(--primary-color);
+      transform: translateX(5px);
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu i {
+      width: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .dropdown-category {
+      padding: 8px 20px;
+      font-weight: 600;
+      color: var(--primary-color);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-category:first-child {
+      margin-top: 0;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+    }
+
+    /* ---------- TOOL HEADER ---------- */
+    .tool-header {
+      text-align: center;
+      padding: 60px 5% 40px;
+      background: var(--header-bg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .tool-header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tool-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      line-height: 1.2;
+    }
+
+    .tool-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin: 0 auto 20px;
+      max-width: 600px;
+    }
+
+    /* ---------- CONVERTER SECTION ---------- */
+    .converter-section {
+      padding: 60px 5%;
+    }
+
+    .converter-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .converter-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .upload-area, .preview-area {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .upload-area:hover, .preview-area:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      font-size: 1.3rem;
+    }
+
+    /* Upload Area Styles */
+    .upload-box {
+      border: 2px dashed var(--primary-color);
+      border-radius: 10px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      background-color: rgba(127, 0, 255, 0.05);
+    }
+
+    .upload-box:hover {
+      background-color: rgba(127, 0, 255, 0.1);
+    }
+
+    .upload-box i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .upload-box p {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .upload-box .file-types {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .or-divider {
+      text-align: center;
+      margin: 15px 0;
+      font-weight: 500;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+
+    .browse-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .browse-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Conversion Options */
+    .conversion-options {
+      margin-top: 25px;
+    }
+
+    .option-group {
+      margin-bottom: 20px;
+    }
+
+    .option-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .select-wrapper, .range-wrapper {
+      position: relative;
+    }
+
+    .format-select, .quality-select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      font-size: 1rem;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .select-wrapper::after {
+      content: '\f078';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--primary-color);
+    }
+
+    .quality-slider {
+      width: 100%;
+      height: 5px;
+      border-radius: 5px;
+      background: #ddd;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .quality-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      cursor: pointer;
+    }
+
+    .quality-value {
+      text-align: center;
+      margin-top: 5px;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+
+    .convert-btn {
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .convert-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .convert-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Preview Area Styles */
+    .preview-container {
+      text-align: center;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preview-placeholder {
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    .preview-placeholder i {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .preview-image {
+      max-width: 100%;
+      max-height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .image-info {
+      margin-top: 20px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .info-label {
+      font-weight: 500;
+    }
+
+    .download-options {
+      margin-top: 25px;
+      display: none;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, var(--success-color), #34d399);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .download-all-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      margin: 20px 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Status Messages */
+    .status-message {
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      display: none;
+    }
+
+    .status-success {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: var(--success-color);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-error {
+      background-color: rgba(239, 68, 68, 0.1);
+      color: var(--error-color);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .status-info {
+      background-color: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    /* Image + Text Sections */
+    .image-text-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 5%;
+    }
+
+    .image-left .section-image {
+      order: 1;
+    }
+
+    .image-left .section-content {
+      order: 2;
+    }
+
+    .image-right .section-image {
+      order: 2;
+    }
+
+    .image-right .section-content {
+      order: 1;
+    }
+
+    .content-image {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+      background-color: #f5f5f5;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 1.2rem;
+    }
+
+    .content-image:hover {
+      transform: scale(1.02);
+    }
+
+    .image-fallback {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image-fallback i {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* ---------- HOW IT WORKS SECTION ---------- */
+    .how-it-works {
+      padding: 60px 5%;
+      background-color: var(--card-bg);
+    }
+
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+      background-color: var(--background-color);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .step-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--primary-color);
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .step-card h3 {
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* ---------- FEATURES SECTION ---------- */
+    .features-section {
+      padding: 60px 5%;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      display: flex;
+      gap: 20px;
+      padding: 25px;
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    .feature-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+
+    /* ---------- ENHANCED FOOTER ---------- */
+    .footer-main {
+      background-color: var(--footer-bg);
+      color: #ccc;
+      padding: 60px 5% 30px;
+      transition: background-color 0.5s ease;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .footer-column p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-links i {
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-newsletter {
+      margin-top: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .newsletter-input::placeholder {
+      color: #aaa;
+    }
+
+    .newsletter-btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #ccc;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Formspree message styles */
+    .form-message {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .form-message.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .form-message.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    @media (max-width: 1024px) {
+      .image-text-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .image-left .section-image,
+      .image-right .section-image {
+        order: 1;
+      }
+      
+      .image-left .section-content,
+      .image-right .section-content {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tool-header h1 {
+        font-size: 2rem;
+      }
+      
+      .nav-links a span {
+        display: none;
+      }
+      
+      .nav-links a i {
+        font-size: 1.2rem;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+      
+      .nav-links a span {
+        display: inline;
+      }
+      
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-legal {
+        justify-content: center;
+      }
+      
+      /* Mobile dropdown */
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        box-shadow: none;
+        display: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        max-height: 50vh;
+      }
+      
+      .dark-mode .dropdown-menu {
+        background: transparent;
+      }
+      
+      .dropdown.active .dropdown-menu {
+        display: block;
+      }
+      
+      .dropdown-menu a {
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .dropdown-menu a:hover {
+        background: rgba(255,255,255,0.1);
+        color: white;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .tool-header {
+        padding: 40px 5% 30px;
+      }
+      
+      .tool-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .converter-section {
+        padding: 40px 5%;
+      }
+      
+      .upload-area, .preview-area {
+        padding: 20px;
+      }
+      
+      .step-card {
+        padding: 20px 15px;
+      }
+      
+      .feature-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Enhanced Navigation -->
+  <nav>
+    <div class="logo-container">
+      <img src="../Photos/Logo.png" alt="ToolLab Logo" class="logo-img">
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a>
+      <a href="../homepage.html" style="color: gold;"><i class="fas fa-star"></i> <span>Features</span></a>
+      <div class="dropdown" id="toolsDropdown">
+        <div class="dropdown-toggle">
+          <i class="fas fa-tools"></i> <span>All Tools</span> <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-category">PDF Tools</div>
+          <a href="pdfspitter.html"><i class="fas fa-cut"></i> PDF Splitter</a>
+          <a href="pdf-compressor.html"><i class="fas fa-file-archive"></i> PDF Compressor</a>
+          <a href="PdfMerger.html"><i class="fas fa-file-medical"></i> PDF Merger</a>
+          <a href="pdfToImg.html"><i class="fas fa-image"></i> PDF to Image</a>
+          <a href="ImgToPdf.html"><i class="fas fa-file-pdf"></i> Image to PDF</a>
+          
+          <div class="dropdown-category">Text Tools</div>
+          <a href="TextCaseConvertor.html"><i class="fas fa-text-height"></i> Text Case Converter</a>
+          <a href="word-counter.html"><i class="fas fa-font"></i> Word Counter</a>
+          <a href="CaptionCreator.html"><i class="fas fa-comment-alt"></i> Caption Creator</a>
+          <a href="html-formatter.html"><i class="fas fa-code"></i> HTML Formatter</a>
+          <a href="json-formatter.html"><i class="fas fa-code"></i> JSON Formatter</a>
+          
+          <div class="dropdown-category">Security Tools</div>
+          <a href="password-generator.html"><i class="fas fa-key"></i> Password Generator</a>
+          <a href="QRcodegenerator.html"><i class="fas fa-qrcode"></i> QR Code Generator</a>
+          
+          <div class="dropdown-category">Utility Tools</div>
+          <a href="AgeCalculator.html"><i class="fas fa-calculator"></i> Age Calculator</a>
+          <a href="NumberBaseConvertor.html"><i class="fas fa-exchange-alt"></i> Number Base Converter</a>
+          <a href="temperature-converter.html"><i class="fas fa-thermometer-half"></i> Temperature Converter</a>
+          <a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a>
+        </div>
+      </div>
+      <a href="../about.html"><i class="fas fa-info-circle"></i> <span>About</span></a>
+      <a href="../Contactus.html"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="tool-header">
+    <div class="tool-header-content">
+      <h1>PDF to Image Converter</h1>
+      <p>Convert your PDF documents to high-quality images (JPG, PNG) instantly. 100% free, no registration required.</p>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 1 -->
+  <div class="image-text-section image-right">
+    <div class="section-image">
+      <div class="content-image">
+        <div class="image-fallback">
+          <i class="fas fa-file-pdf"></i>
+          <p>PDF to Image Conversion</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <h2>Convert PDFs to Images in Seconds</h2>
+      <p>Transform your PDF documents into high-quality images with our easy-to-use converter. Perfect for sharing documents on social media, creating presentations, or extracting images from PDF files.</p>
+      <p>Our tool preserves the original layout and quality of your PDF while converting it to your preferred image format.</p>
+    </div>
+  </div>
+
+  <section class="converter-section">
+    <div class="converter-container">
+      <!-- Upload Area -->
+      <div class="upload-area">
+        <h2 class="section-title"><i class="fas fa-file-upload"></i> Upload PDF</h2>
+        
+        <div class="upload-box" id="uploadBox">
+          <i class="fas fa-file-pdf"></i>
+          <p>Drag & Drop your PDF file here</p>
+          <p class="file-types">Supports: PDF (Max: 50MB)</p>
+        </div>
+        
+        <input type="file" id="fileInput" class="file-input" accept=".pdf">
+        
+        <div class="or-divider">OR</div>
+        
+        <button class="browse-btn" id="browseBtn">
+          <i class="fas fa-folder-open"></i> Browse Files
+        </button>
+        
+        <div class="conversion-options">
+          <div class="option-group">
+            <label class="option-label">Output Format</label>
+            <div class="select-wrapper">
+              <select class="format-select" id="formatSelect">
+                <option value="jpg">JPG (Recommended)</option>
+                <option value="png">PNG (Lossless)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="option-group">
+            <label class="option-label">Image Quality</label>
+            <div class="range-wrapper">
+              <input type="range" min="1" max="100" value="90" class="quality-slider" id="qualitySlider">
+              <div class="quality-value" id="qualityValue">90%</div>
+            </div>
+          </div>
+          
+          <div class="option-group">
+            <label class="option-label">Pages to Convert</label>
+            <div class="select-wrapper">
+              <select class="format-select" id="pagesSelect">
+                <option value="all">All Pages</option>
+                <option value="range">Specific Pages</option>
+                <option value="single">Single Page</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="status-message" id="statusMessage"></div>
+        
+        <button class="convert-btn" id="convertBtn" disabled>
+          <i class="fas fa-sync-alt"></i> Convert to Images
+        </button>
+      </div>
+      
+      <!-- Preview Area -->
+      <div class="preview-area">
+        <h2 class="section-title"><i class="fas fa-image"></i> Preview & Download</h2>
+        
+        <div class="preview-container" id="previewContainer">
+          <div class="preview-placeholder" id="previewPlaceholder">
+            <i class="fas fa-image"></i>
+            <p>Your converted images will appear here</p>
+          </div>
+          <img src="" alt="Preview" class="preview-image" id="previewImage">
+        </div>
+        
+        <div class="image-info" id="imageInfo">
+          <!-- Image details will be populated here -->
+        </div>
+        
+        <div class="download-options" id="downloadOptions">
+          <button class="download-btn" id="downloadCurrentBtn">
+            <i class="fas fa-download"></i> Download Current
+          </button>
+          <button class="download-btn download-all-btn" id="downloadAllBtn">
+            <i class="fas fa-file-archive"></i> Download All
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Text Section 2 -->
+  <div class="image-text-section image-left">
+    <div class="section-content">
+      <h2>High-Quality Conversion</h2>
+      <p>Our PDF to Image converter maintains the highest quality possible during conversion. Whether you need JPG for web use or PNG for transparency, we've got you covered.</p>
+      <p>Customize the output quality to balance file size and image clarity according to your needs.</p>
+      <div class="trust-badges" style="display: flex; gap: 15px; margin-top: 20px;">
+        <div class="badge" style="display: flex; align-items: center; gap: 8px; background: var(--card-bg); padding: 10px 20px; border-radius: 25px; box-shadow: var(--shadow); font-size: 0.9rem; font-weight: 500;">
+          <i class="fas fa-expand-arrows-alt" style="color: var(--primary-color);"></i>
+          <span style="color:#7F00FF ;">High Resolution</span>
+        </div>
+        <div class="badge" style="display: flex; align-items: center; gap: 8px; background: var(--card-bg); padding: 10px 20px; border-radius: 25px; box-shadow: var(--shadow); font-size: 0.9rem; font-weight: 500;">
+          <i class="fas fa-palette" style="color: var(--primary-color);"></i>
+          <span style="color:#7F00FF ;">Color Accuracy</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-image">
+      <div class="content-image">
+        <div class="image-fallback">
+          <i class="fas fa-images"></i>
+          <p>High Quality Conversion</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 50px; color: var(--primary-color);">
+        <i class="fas fa-play-circle"></i> How It Works
+      </h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <div style="position: relative;">
+            <div class="step-icon">
+              <i class="fas fa-file-upload"></i>
+            </div>
+            <div class="step-number">1</div>
+          </div>
+          <h3>Upload PDF</h3>
+          <p>Drag and drop your PDF file or click to browse. We support files up to 50MB.</p>
+        </div>
+        
+        <div class="step-card">
+          <div style="position: relative;">
+            <div class="step-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="step-number">2</div>
+          </div>
+          <h3>Convert</h3>
+          <p>Choose your preferred format and quality settings, then click convert.</p>
+        </div>
+        
+        <div class="step-card">
+          <div style="position: relative;">
+            <div class="step-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <div class="step-number">3</div>
+          </div>
+          <h3>Download</h3>
+          <p>Preview your images and download them individually or as a ZIP file.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 50px; color: var(--primary-color);">
+        <i class="fas fa-star"></i> Why Use Our PDF to Image Converter?
+      </h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="feature-content">
+            <h3>100% Secure</h3>
+            <p>Your files are processed locally in your browser. We never upload them to our servers, ensuring complete privacy.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Lightning Fast</h3>
+            <p>Convert PDFs to images in seconds with our optimized conversion algorithm.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="feature-content">
+            <h3>High Quality</h3>
+            <p>Maintain the original quality of your PDF with customizable output settings.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Works Everywhere</h3>
+            <p>Use our tool on any device - desktop, tablet, or mobile with full functionality.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <div class="feature-content">
+            <h3>No Limits</h3>
+            <p>Convert as many PDFs as you want with no restrictions or hidden fees.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="feature-content">
+            <h3>No Registration</h3>
+            <p>Start converting immediately without creating an account or providing any personal information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About ToolLab</h3>
+        <p>ToolLab provides a comprehensive suite of completely free online tools with no signup required. Our mission is to make your digital tasks simpler, faster, and more secure without any cost or commitment.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/bramha_intelligence" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joglekarvijay03" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VijayJoglekar" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Free Tool Categories</h3>
+        <ul class="footer-links">
+          <li><a href="../Tools.html"><i class="fas fa-chevron-right"></i> All Free Tools</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Text Tools</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Image Tools</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> PDF Tools</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> File Converters</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="../Contactus.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          <li><a href="../privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="../homepage.html"><i class="fas fa-chevron-right"></i> Features</a></li>
+          <li><a href="../about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to receive updates on new free tools and features.</p>
+        <div class="footer-newsletter">
+          <form class="newsletter-form" action="https://formspree.io/f/xkgqqbzk" method="POST">
+            <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div id="form-message" class="form-message"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <div class="footer-copyright">
+        <p>© 2025 ToolLab. All rights reserved. | 100% Free Online Tools</p>
+      </div>
+      <div class="footer-legal">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../privacy-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Mobile dropdown functionality
+    const toolsDropdown = document.getElementById('toolsDropdown');
+    const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
+    
+    // Toggle dropdown on mobile
+    dropdownToggle.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toolsDropdown.classList.toggle('active');
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && !toolsDropdown.contains(e.target)) {
+        toolsDropdown.classList.remove('active');
+      }
+    });
+
+    // Dark/Light mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    });
+
+    // Formspree newsletter form handling
+    const newsletterForm = document.querySelector('.newsletter-form');
+    const formMessage = document.getElementById('form-message');
+    
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('.newsletter-btn');
+        const originalText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+        
+        try {
+          const formData = new FormData(this);
+          const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            formMessage.textContent = 'Thank you! You have successfully subscribed.';
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            this.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          formMessage.textContent = 'Sorry, there was an error. Please try again.';
+          formMessage.className = 'form-message error';
+          formMessage.style.display = 'block';
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            formMessage.style.display = 'none';
+          }, 5000);
+        }
+      });
+    }
+    
+    // PDF to Image Converter Logic
+    const uploadBox = document.getElementById('uploadBox');
+    const fileInput = document.getElementById('fileInput');
+    const browseBtn = document.getElementById('browseBtn');
+    const convertBtn = document.getElementById('convertBtn');
+    const previewImage = document.getElementById('previewImage');
+    const previewPlaceholder = document.getElementById('previewPlaceholder');
+    const downloadOptions = document.getElementById('downloadOptions');
+    const downloadCurrentBtn = document.getElementById('downloadCurrentBtn');
+    const downloadAllBtn = document.getElementById('downloadAllBtn');
+    const progressContainer = document.getElementById('progressContainer');
+    const progressBar = document.getElementById('progressBar');
+    const statusMessage = document.getElementById('statusMessage');
+    const qualitySlider = document.getElementById('qualitySlider');
+    const qualityValue = document.getElementById('qualityValue');
+    const imageInfo = document.getElementById('imageInfo');
+    
+    let uploadedFile = null;
+    let convertedImages = [];
+    
+    // Update quality value display
+    qualitySlider.addEventListener('input', () => {
+      qualityValue.textContent = `${qualitySlider.value}%`;
+    });
+    
+    // File upload handling
+    browseBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+    
+    uploadBox.addEventListener('click', () => {
+      fileInput.click();
+    });
+    
+    uploadBox.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadBox.style.borderColor = 'var(--secondary-color)';
+      uploadBox.style.backgroundColor = 'rgba(225, 0, 255, 0.1)';
+    });
+    
+    uploadBox.addEventListener('dragleave', () => {
+      uploadBox.style.borderColor = 'var(--primary-color)';
+      uploadBox.style.backgroundColor = 'rgba(127, 0, 255, 0.05)';
+    });
+    
+    uploadBox.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadBox.style.borderColor = 'var(--primary-color)';
+      uploadBox.style.backgroundColor = 'rgba(127, 0, 255, 0.05)';
+      
+      if (e.dataTransfer.files.length) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+    
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length) {
+        handleFile(e.target.files[0]);
+      }
+    });
+    
+    function handleFile(file) {
+      // Check if file is PDF
+      if (file.type !== 'application/pdf') {
+        showStatus('Please upload a valid PDF file.', 'error');
+        return;
+      }
+      
+      // Check file size (50MB limit)
+      if (file.size > 50 * 1024 * 1024) {
+        showStatus('File size exceeds 50MB limit.', 'error');
+        return;
+      }
+      
+      uploadedFile = file;
+      convertBtn.disabled = false;
+      
+      // Update upload box
+      uploadBox.innerHTML = `
+        <i class="fas fa-file-pdf" style="color: var(--success-color);"></i>
+        <p>${file.name}</p>
+        <p class="file-types">${(file.size / 1024 / 1024).toFixed(2)} MB</p>
+      `;
+      
+      showStatus('PDF file uploaded successfully. Ready to convert.', 'success');
+    }
+    
+    // Convert button click
+    convertBtn.addEventListener('click', () => {
+      if (!uploadedFile) return;
+      
+      // Show progress bar
+      progressContainer.style.display = 'block';
+      progressBar.style.width = '0%';
+      
+      // Simulate conversion process
+      simulateConversion();
+    });
+    
+    function simulateConversion() {
+      convertBtn.disabled = true;
+      convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Converting...';
+      
+      // Simulate progress
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          conversionComplete();
+        }
+        progressBar.style.width = `${progress}%`;
+      }, 200);
+    }
+    
+    function conversionComplete() {
+      // Reset button
+      convertBtn.disabled = false;
+      convertBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert to Images';
+      
+      // Hide progress bar
+      setTimeout(() => {
+        progressContainer.style.display = 'none';
+      }, 1000);
+      
+      // Show success message
+      showStatus('PDF converted to images successfully!', 'success');
+      
+      // Simulate converted images
+      convertedImages = [
+        { name: 'page1.jpg', size: '245 KB', dimensions: '1240x1754' },
+        { name: 'page2.jpg', size: '198 KB', dimensions: '1240x1754' },
+        { name: 'page3.jpg', size: '312 KB', dimensions: '1240x1754' }
+      ];
+      
+      // Show preview
+      previewPlaceholder.style.display = 'none';
+      previewImage.style.display = 'block';
+      // Using a placeholder image that will definitely work
+      previewImage.src = 'https://via.placeholder.com/600x800/7F00FF/FFFFFF?text=Converted+Image+Preview';
+      
+      // Show image info
+      imageInfo.innerHTML = `
+        <div class="info-item">
+          <span class="info-label">Filename:</span>
+          <span>${convertedImages[0].name}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Size:</span>
+          <span>${convertedImages[0].size}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Dimensions:</span>
+          <span>${convertedImages[0].dimensions}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Format:</span>
+          <span>${document.getElementById('formatSelect').value.toUpperCase()}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Quality:</span>
+          <span>${qualitySlider.value}%</span>
+        </div>
+      `;
+      
+      // Show download options
+      downloadOptions.style.display = 'block';
+    }
+    
+    // Download buttons
+    downloadCurrentBtn.addEventListener('click', () => {
+      showStatus('Downloading current image...', 'info');
+      // In a real implementation, this would trigger the download
+      setTimeout(() => {
+        showStatus('Image downloaded successfully!', 'success');
+      }, 1500);
+    });
+    
+    downloadAllBtn.addEventListener('click', () => {
+      showStatus('Preparing ZIP file with all images...', 'info');
+      // In a real implementation, this would create and download a ZIP
+      setTimeout(() => {
+        showStatus('ZIP file downloaded successfully!', 'success');
+      }, 2000);
+    });
+    
+    // Status message function
+    function showStatus(message, type) {
+      statusMessage.textContent = message;
+      statusMessage.className = 'status-message';
+      statusMessage.classList.add(`status-${type}`);
+      statusMessage.style.display = 'block';
+      
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        statusMessage.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

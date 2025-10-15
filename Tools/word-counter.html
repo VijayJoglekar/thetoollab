@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Counter - Count Words, Characters & More | ToolLab</title>
+  <meta name="description" content="Free online Word Counter - Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for writers, students, and professionals.">
+  <meta name="keywords" content="word counter, character counter, sentence counter, paragraph counter, reading time calculator, writing tools, text analyzer, word count tool, online word counter">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ToolLab">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  <meta name="google-adsense-account" content="ca-pub-1579994484328521">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Word Counter - Count Words, Characters & More | ToolLab">
+  <meta property="og:description" content="Free online Word Counter - Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for writers, students, and professionals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetoollab.netlify.app/tools/word-counter.html">
+  <meta property="og:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  <meta property="og:site_name" content="ToolLab">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Word Counter - Count Words, Characters & More | ToolLab">
+  <meta name="twitter:description" content="Free online Word Counter - Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for writers, students, and professionals.">
+  <meta name="twitter:image" content="https://thetoollab.netlify.app/Photos/Logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../Photos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../Photos/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Photos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Photos/favicon-16x16.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://thetoollab.netlify.app/tools/word-counter.html">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Word Counter",
+    "description": "Free online tool to count words, characters, sentences, paragraphs, and calculate reading time",
+    "url": "https://thetoollab.netlify.app/tools/word-counter.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "permissions": "none",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "url": "https://thetoollab.netlify.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolLab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetoollab.netlify.app/Photos/Logo.png"
+      }
+    }
+  }
+  </script>
+   <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1579994484328521"
+     crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --primary-color: #7F00FF;
+      --secondary-color: #E100FF;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: linear-gradient(90deg, #7F00FF, #E100FF);
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+      --footer-bg: #111;
+    }
+
+    .dark-mode {
+      --primary-color: #9d4edd;
+      --secondary-color: #c77dff;
+      --background-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --header-bg: linear-gradient(90deg, #5a189a, #7b2cbf);
+      --shadow: 0 4px 10px rgba(0,0,0,0.2);
+      --footer-bg: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: var(--header-bg);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 35px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--card-bg);
+      min-width: 280px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      z-index: 1001;
+      padding: 15px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content h4 {
+      color: var(--primary-color);
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .dropdown-content a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      color: var(--text-color);
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(127, 0, 255, 0.1);
+    }
+
+    .dropdown-content a i {
+      color: var(--primary-color);
+      width: 20px;
+      text-align: center;
+    }
+
+    .coming-soon {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(15deg);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 60px 5% 40px;
+      background: var(--header-bg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0 auto 20px;
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 5%;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-section, .stats-section {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .input-section::before, .stats-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: var(--primary-color);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background: var(--card-bg);
+      color: var(--text-color);
+      resize: vertical;
+      min-height: 200px;
+      font-family: inherit;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-secondary {
+      background: var(--background-color);
+      color: var(--text-color);
+      border: 2px solid #e9ecef;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary-color);
+    }
+
+    /* Statistics Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .stat-card {
+      background: var(--background-color);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border-left: 4px solid var(--primary-color);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* Reading Time */
+    .reading-time {
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--background-color);
+      border-radius: 10px;
+      border-left: 4px solid #10b981;
+    }
+
+    .reading-time h3 {
+      margin-bottom: 10px;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .time-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .time-card {
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .time-value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #10b981;
+      margin-bottom: 5px;
+    }
+
+    .time-label {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Quick Examples */
+    .quick-examples {
+      margin-top: 20px;
+    }
+
+    .example-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .example-btn {
+      background: var(--background-color);
+      border: 2px solid #e9ecef;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .example-btn:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* ---------- ENHANCED FOOTER ---------- */
+    .footer-main {
+      background-color: var(--footer-bg);
+      color: #ccc;
+      padding: 60px 5% 30px;
+      transition: background-color 0.5s ease;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .footer-column p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-links i {
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #ccc;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    /* Tablets */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 5% 30px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .nav-links a span {
+        display: none;
+      }
+      
+      .nav-links a i {
+        font-size: 1.2rem;
+      }
+      
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-legal {
+        justify-content: center;
+      }
+      
+      .btn-group {
+        flex-direction: column;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 576px) {
+      nav {
+        padding: 12px 5%;
+      }
+      
+      .logo-img {
+        height: 30px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+      
+      .nav-links a span {
+        display: inline;
+      }
+
+      /* Mobile dropdown styles */
+      .dropdown-content {
+        position: static;
+        max-height: 60vh;
+        overflow-y: auto;
+        margin-top: 10px;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: none;
+        animation: slideDown 0.3s ease;
+      }
+      
+      @keyframes slideDown {
+        from { 
+          opacity: 0;
+          max-height: 0;
+        }
+        to { 
+          opacity: 1;
+          max-height: 60vh;
+        }
+      }
+      
+      .dropdown.active .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown-toggle .fa-chevron-down {
+        transition: transform 0.3s ease;
+      }
+      
+      .dropdown.active .dropdown-toggle .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+      
+      .dropdown-content a {
+        color: white;
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        border-left: 3px solid transparent;
+      }
+      
+      .dropdown-content a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-left-color: var(--secondary-color);
+      }
+      
+      .dropdown-content a i {
+        color: white;
+      }
+      
+      .dropdown-content h4 {
+        color: white;
+        border-bottom-color: rgba(255,255,255,0.3);
+        margin-top: 15px;
+      }
+      
+      .dropdown-content h4:first-child {
+        margin-top: 0;
+      }
+      
+      .hero {
+        padding: 40px 5% 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .container {
+        padding: 20px 5%;
+      }
+      
+      .input-section, .stats-section {
+        padding: 20px;
+      }
+      
+      .example-buttons {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .time-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="../Photos/Logo.png" alt="ToolLab Logo" class="logo-img">
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a>
+      
+      <!-- Tools Dropdown -->
+      <div class="dropdown" id="toolsDropdown">
+        <a href="#" class="dropdown-toggle"><i class="fas fa-tools"></i> <span>Tools</span> <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <h4>Most Popular</h4>
+          <a href="password-generator.html"><i class="fas fa-key"></i> Password Generator</a>
+          <a href="QRcodegenerator.html"><i class="fas fa-qrcode"></i> QR Code Generator</a>
+          <a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a>
+          <a href="PdfMerger.html"><i class="fas fa-object-group"></i> PDF Merger</a>
+
+          <h4>Text Tools</h4>
+          <a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a>
+          <a href="TextCaseConvertor.html"><i class="fas fa-text-height"></i> Case Converter</a>
+          
+        
+    
+
+          <h4>Image Tools</h4>
+          <a href="ImageCompressor.html"><i class="fas fa-compress-alt"></i> Image Compressor</a>
+          <a href="ImgToPdf.html"><i class="fas fa-file-pdf"></i> Image to PDF</a>
+         
+          <a href="ImgToPdf.html"><i class="fas fa-sync"></i> Image Converter</a>
+          
+
+          <h4>PDF Tools</h4>
+          <a href="PdfMerger.html"><i class="fas fa-object-group"></i> PDF Merger</a>
+          <a href="pdfspitter.html"><i class="fas fa-cut"></i> PDF Splitter</a>
+          <a href="pdfToImg.html"><i class="fas fa-file-image"></i> PDF to Image</a>
+          <a href="pdf-compressor.html"><i class="fas fa-file-archive"></i> PDF Compressor</a>
+
+          <h4>Developer Tools</h4>
+          <a href="json-formatter.html"><i class="fas fa-code"></i> JSON Formatter</a>
+         
+
+          <h4>Converters</h4>
+          <a href="temperature-converter.html"><i class="fas fa-thermometer-half"></i> Temperature Converter</a>
+          <a href="NumberBaseConvertor.html"><i class="fas fa-superscript"></i> Number Base Converter</a>
+       
+
+          <h4>Utility Tools</h4>
+          <a href="AgeCalculator.html"><i class="fas fa-birthday-cake"></i> Age Calculator</a>
+          <a href="CaptionCreator.html"><i class="fas fa-comment-alt"></i> Caption Creator</a>
+        </div>
+      </div>
+      
+      <a href="../about.html"><i class="fas fa-info-circle"></i> <span>About</span></a>
+      <a href="../contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Word Counter</h1>
+      <div class="hero-subtitle">Count Words, Characters, Sentences & More</div>
+      <p>Free online word counter that analyzes your text in real-time. Perfect for writers, students, and professionals.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="input-section">
+        <h2 class="section-title"><i class="fas fa-edit"></i> Your Text</h2>
+        
+        <div class="form-group">
+          <label for="text-input"><i class="fas fa-keyboard"></i> Enter Your Text</label>
+          <textarea id="text-input" placeholder="Start typing or paste your text here...">Welcome to ToolLab's Word Counter! This powerful tool helps you analyze your text in real-time. Simply type or paste your content, and we'll instantly count words, characters, sentences, paragraphs, and even estimate reading time. Perfect for writers, students, bloggers, and professionals who need precise text analysis.</textarea>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn" onclick="countText()">
+            <i class="fas fa-calculator"></i> Count Text
+          </button>
+          <button class="btn btn-secondary" onclick="clearText()">
+            <i class="fas fa-eraser"></i> Clear Text
+          </button>
+          <button class="btn btn-secondary" onclick="pasteText()">
+            <i class="fas fa-paste"></i> Paste Text
+          </button>
+          <button class="btn btn-secondary" onclick="copyText()">
+            <i class="fas fa-copy"></i> Copy Text
+          </button>
+        </div>
+
+        <div class="quick-examples">
+          <label><i class="fas fa-bolt"></i> Quick Examples:</label>
+          <div class="example-buttons">
+            <button class="example-btn" onclick="loadExample('blog')">Blog Post</button>
+            <button class="example-btn" onclick="loadExample('essay')">Essay</button>
+            <button class="example-btn" onclick="loadExample('social')">Social Media</button>
+            <button class="example-btn" onclick="loadExample('code')">Code Snippet</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h2 class="section-title"><i class="fas fa-chart-bar"></i> Text Statistics</h2>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="word-count">24</div>
+            <div class="stat-label">Words</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="char-count">156</div>
+            <div class="stat-label">Characters</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="char-no-space-count">129</div>
+            <div class="stat-label">Characters (no spaces)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="sentence-count">2</div>
+            <div class="stat-label">Sentences</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="paragraph-count">1</div>
+            <div class="stat-label">Paragraphs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="line-count">1</div>
+            <div class="stat-label">Lines</div>
+          </div>
+        </div>
+
+        <div class="reading-time">
+          <h3><i class="fas fa-clock"></i> Reading Time</h3>
+          <p>Based on average reading speed of 200 words per minute</p>
+          <div class="time-cards">
+            <div class="time-card">
+              <div class="time-value" id="reading-time">7s</div>
+              <div class="time-label">Slow Reading</div>
+            </div>
+            <div class="time-card">
+              <div class="time-value" id="reading-time-avg">7s</div>
+              <div class="time-label">Average Reading</div>
+            </div>
+            <div class="time-card">
+              <div class="time-value" id="reading-time-fast">4s</div>
+              <div class="time-label">Fast Reading</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Real-time Counting</h3>
+        <p>Get instant word and character counts as you type or paste text</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+        <h3>Detailed Analysis</h3>
+        <p>Comprehensive statistics including sentences, paragraphs, and reading time</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+        <h3>Reading Time</h3>
+        <p>Estimate how long it takes to read your content at different speeds</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Privacy First</h3>
+        <p>All processing happens locally in your browser - no data sent to servers</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About ToolLab</h3>
+        <p>ToolLab provides a comprehensive suite of completely free online tools with no signup required. Our mission is to make your digital tasks simpler, faster, and more secure.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/bramha_intelligence" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joglekarvijay03" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VijayJoglekar" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="../about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Text Tools</h3>
+        <ul class="footer-links">
+          <li><a href="word-counter.html"><i class="fas fa-calculator"></i> Word Counter</a></li>
+          <li><a href="TextCaseConvertor.html"><i class="fas fa-text-height"></i> Case Converter</a></li>
+          <li><a href="password-generator.html"><i class="fas fa-eraser"></i> Password Generator</a></li>
+          <li><a href="QRcodegenerator.html"><i class="fas fa-retweet"></i> QR Generator</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <div class="footer-copyright">
+        <p>© 2025 ToolLab. All rights reserved. | 100% Free Online Tools</p>
+      </div>
+      <div class="footer-legal">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Word Counter Functions
+    function countText() {
+      const text = document.getElementById('text-input').value;
+      
+      // Word count (split by spaces and filter out empty strings)
+      const words = text.trim() ? text.trim().split(/\s+/) : [];
+      const wordCount = words.length;
+      
+      // Character counts
+      const charCount = text.length;
+      const charNoSpaceCount = text.replace(/\s/g, '').length;
+      
+      // Sentence count (split by . ! ? and filter out empty strings)
+      const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+      const sentenceCount = sentences.length;
+      
+      // Paragraph count (split by newlines and filter out empty strings)
+      const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+      const paragraphCount = paragraphs.length;
+      
+      // Line count
+      const lineCount = text.split('\n').length;
+      
+      // Reading time calculations (words per minute)
+      const readingTimeSlow = Math.ceil(wordCount / 150); // Slow reading: 150 WPM
+      const readingTimeAvg = Math.ceil(wordCount / 200); // Average reading: 200 WPM
+      const readingTimeFast = Math.ceil(wordCount / 250); // Fast reading: 250 WPM
+      
+      // Update the UI
+      document.getElementById('word-count').textContent = wordCount.toLocaleString();
+      document.getElementById('char-count').textContent = charCount.toLocaleString();
+      document.getElementById('char-no-space-count').textContent = charNoSpaceCount.toLocaleString();
+      document.getElementById('sentence-count').textContent = sentenceCount.toLocaleString();
+      document.getElementById('paragraph-count').textContent = paragraphCount.toLocaleString();
+      document.getElementById('line-count').textContent = lineCount.toLocaleString();
+      
+      // Update reading times
+      document.getElementById('reading-time').textContent = readingTimeSlow + 'm';
+      document.getElementById('reading-time-avg').textContent = readingTimeAvg + 'm';
+      document.getElementById('reading-time-fast').textContent = readingTimeFast + 'm';
+      
+      // Handle singular/plural for times under 1 minute
+      if (readingTimeSlow < 1) document.getElementById('reading-time').textContent = '<1m';
+      if (readingTimeAvg < 1) document.getElementById('reading-time-avg').textContent = '<1m';
+      if (readingTimeFast < 1) document.getElementById('reading-time-fast').textContent = '<1m';
+    }
+
+    function clearText() {
+      document.getElementById('text-input').value = '';
+      countText();
+    }
+
+    async function pasteText() {
+      try {
+        const text = await navigator.clipboard.readText();
+        document.getElementById('text-input').value = text;
+        countText();
+      } catch (err) {
+        alert('Unable to paste from clipboard. Please paste manually.');
+      }
+    }
+
+    function copyText() {
+      const text = document.getElementById('text-input').value;
+      navigator.clipboard.writeText(text).then(() => {
+        // Show temporary feedback
+        const originalText = document.getElementById('text-input').value;
+        document.getElementById('text-input').value = '✓ Text copied to clipboard!';
+        
+        setTimeout(() => {
+          document.getElementById('text-input').value = originalText;
+        }, 1500);
+      }).catch(err => {
+        alert('Failed to copy text to clipboard');
+      });
+    }
+
+    function loadExample(type) {
+      const examples = {
+        blog: "Welcome to our blog! Today we're discussing the importance of digital tools in modern workflows. With the right tools, you can significantly improve your productivity and efficiency. Whether you're a student, professional, or entrepreneur, having access to reliable online tools can make all the difference in your daily tasks.",
+        
+        essay: "The impact of technology on modern society cannot be overstated. From communication to education, healthcare to transportation, technological advancements have revolutionized every aspect of our lives. This essay will explore the profound changes brought about by digital innovation and consider both the benefits and challenges of our increasingly connected world.",
+        
+        social: "Just launched our new feature! 🚀\n\nWe're excited to announce that ToolLab now includes real-time collaboration features. Work together with your team seamlessly across different devices.\n\n#ProductLaunch #Collaboration #TechTools",
+        
+        code: "function calculateWordCount(text) {\n  // Remove extra whitespace and split into words\n  const words = text.trim().split(/\\s+/);\n  \n  // Return the word count\n  return words.length;\n}\n\n// Example usage\nconst sampleText = 'Hello world! This is a sample.';\nconsole.log(calculateWordCount(sampleText)); // Output: 6"
+      };
+      
+      document.getElementById('text-input').value = examples[type];
+      countText();
+    }
+
+    // Navigation and Dropdown Functions
+    document.addEventListener('DOMContentLoaded', function() {
+      // Dark mode toggle
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = themeToggle.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+          icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+          icon.classList.replace('fa-sun', 'fa-moon');
+        }
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const toolsDropdown = document.getElementById('toolsDropdown');
+      
+      menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('active');
+        
+        // Toggle menu icon
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+          icon.classList.replace('fa-times', 'fa-bars');
+          // Close dropdown when closing mobile menu
+          toolsDropdown.classList.remove('active');
+        }
+      });
+
+      // Dropdown functionality
+      const dropdownToggle = toolsDropdown.querySelector('.dropdown-toggle');
+      
+      // Toggle dropdown on click
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // For mobile: only toggle dropdown, don't close navbar
+        if (window.innerWidth <= 576) {
+          toolsDropdown.classList.toggle('active');
+        } else {
+          // For desktop: normal dropdown behavior
+          toolsDropdown.classList.toggle('active');
+        }
+      });
+
+      // Close dropdown when clicking outside (for desktop)
+      document.addEventListener('click', function(e) {
+        if (!toolsDropdown.contains(e.target) && window.innerWidth > 576) {
+          toolsDropdown.classList.remove('active');
+        }
+      });
+
+      // Close mobile menu when clicking on regular links (not dropdown toggle)
+      const navLinksList = navLinks.querySelectorAll('a:not(.dropdown-toggle)');
+      navLinksList.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 576) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            toolsDropdown.classList.remove('active');
+          }
+        });
+      });
+
+      // Close dropdown when clicking on dropdown links (in mobile)
+      const dropdownLinks = toolsDropdown.querySelectorAll('.dropdown-content a');
+      dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 576) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            toolsDropdown.classList.remove('active');
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 576) {
+          // Reset mobile menu state when switching to desktop
+          navLinks.classList.remove('active');
+          menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+          toolsDropdown.classList.remove('active');
+        }
+      });
+
+      // Auto-count on page load and when typing
+      countText();
+      document.getElementById('text-input').addEventListener('input', countText);
+    });
+  </script>
+</body>
+</html>
